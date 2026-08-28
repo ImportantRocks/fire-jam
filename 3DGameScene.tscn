@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkhr0bjpu5jdq"]
 
-[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://BaseMaterial.tres" id="1_letfk"]
-[ext_resource type="PackedScene" uid="uid://ji2kqt6ae2qm" path="res://girl_a.tscn" id="2_letfk"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="1_letfk"]
+[ext_resource type="PackedScene" uid="uid://ji2kqt6ae2qm" path="res://Models/girl_a.tscn" id="2_letfk"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
