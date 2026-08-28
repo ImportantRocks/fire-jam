@@ -74,7 +74,6 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 text = "Oh yeah"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/MarginContainer/RichTextLabel" unique_id=905030831]
-root_node = NodePath("../../../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=905030831]
 libraries/ = SubResource("AnimationLibrary_1vt4a")
 autoplay = &"TextScroll"
