@@ -1,3 +1,37 @@
 [gd_scene format=3 uid="uid://blj7s24rq214s"]
 
 [node name="Main" type="Node" unique_id=285457548]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1919853412]
+
+[node name="Control" type="Control" parent="Node3D" unique_id=1074791563]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node3D/Control" unique_id=469969597]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Node3D/Control/SubViewportContainer" unique_id=1993873376]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Node3D/Control/SubViewportContainer/SubViewport" unique_id=95499100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.1714916)
+
+[node name="UserInterface" type="Control" parent="." unique_id=1434144997]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
