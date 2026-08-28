@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 	#connecting the animation finished signal to the next function
 	#DialogDb.dialog0._on_animation_finished.connect()
-
+#yo
 
 func dialog1(string) -> void:
 	#remove previous dialog child
