@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://blj7s24rq214s"]
 
+[ext_resource type="Script" uid="uid://dgbtb6tqohwjw" path="res://MainScript.gd" id="1_bvrni"]
 [ext_resource type="PackedScene" uid="uid://dkhr0bjpu5jdq" path="res://3DGameScene.tscn" id="1_st2d5"]
 
 [node name="Main" type="Node" unique_id=285457548]
+script = ExtResource("1_bvrni")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1724846294]
 
@@ -34,27 +36,10 @@ render_target_update_mode = 4
 [node name="Camera3D" type="Camera3D" parent="CanvasLayer/Node3D/Control/SubViewportContainer/SubViewport" unique_id=95499100]
 transform = Transform3D(0.99231786, 0.0032384633, -0.12367195, 0, 0.99965733, 0.026176943, 0.12371434, -0.025975848, 0.9919778, -0.67182875, 2.4779298, 4.1076727)
 
-[node name="UserInterface" type="Control" parent="CanvasLayer" unique_id=1434144997]
+[node name="Dialog" type="Control" parent="CanvasLayer" unique_id=1434144997]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UserInterface" unique_id=330255076]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 677.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UserInterface/MarginContainer" unique_id=684178532]
-layout_mode = 2
-text = "Oh yeah"
