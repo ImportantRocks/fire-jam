@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dkhr0bjpu5jdq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
+
+[sub_resource type="Environment" id="Environment_ujtrj"]
+
+[node name="Node3D" type="Node3D" unique_id=2096510720]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1632006872]
+transform = Transform3D(5.3900003, 0, 0, 0, -4.371139e-08, -2, 0, 1, -8.742278e-08, 0, 1, -3.3113303)
+mesh = SubResource("PlaneMesh_ujtrj")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1607733672]
+transform = Transform3D(-2.356044e-07, 1, -8.742278e-08, 0, -4.371139e-08, -2, -5.3900003, -4.371139e-08, 3.821371e-15, -5, 1, -0.31133032)
+mesh = SubResource("PlaneMesh_ujtrj")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1739720655]
+transform = Transform3D(-3.059797e-07, -1, 8.742278e-08, 0, -4.371139e-08, -2, 7, -4.371139e-08, 3.821371e-15, 5, 1, 3.6886697)
+mesh = SubResource("PlaneMesh_ujtrj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=505988903]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 5.1, 0, -1, -0.31393266)
+mesh = SubResource("PlaneMesh_ujtrj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2140297276]
+environment = SubResource("Environment_ujtrj")
