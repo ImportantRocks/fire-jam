@@ -5,8 +5,6 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_st2d5"]
-
 [sub_resource type="Environment" id="Environment_ujtrj"]
 
 [node name="Node3D" type="Node3D" unique_id=2096510720]
@@ -33,18 +31,17 @@ material_override = ExtResource("1_letfk")
 mesh = SubResource("PlaneMesh_ujtrj")
 surface_material_override/0 = ExtResource("1_letfk")
 
-[node name="Sphere0" type="MeshInstance3D" parent="." unique_id=1306296247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69304, 1.3300221, -0.16000581)
-material_override = ExtResource("1_letfk")
-mesh = SubResource("SphereMesh_st2d5")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2140297276]
 environment = SubResource("Environment_ujtrj")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4421736, 0)
-light_color = Color(0.6720365, 0.5958214, 0.4524824, 1)
-light_energy = 2.859
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.176464, 0)
+light_color = Color(0.8944776, 0.5343185, 0.31100973, 1)
+light_energy = 10.0
+shadow_enabled = true
 
 [node name="GirlA" parent="." unique_id=2130175865 instance=ExtResource("2_letfk")]
 transform = Transform3D(0.7144319, 0, 0.699705, 0, 1, 0, -0.699705, 0, 0.7144319, -1.5907258, -0.7129078, -1.9691045)
+
+[node name="GirlA2" parent="." unique_id=778305976 instance=ExtResource("2_letfk")]
+transform = Transform3D(0.6187654, 0, -0.7855758, 0, 1, 0, 0.7855758, 0, 0.6187654, 3.2857838, -0.69060016, 0.042479277)
