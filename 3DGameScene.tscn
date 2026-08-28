@@ -2,6 +2,8 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_st2d5"]
+
 [sub_resource type="Environment" id="Environment_ujtrj"]
 
 [node name="Node3D" type="Node3D" unique_id=2096510720]
@@ -22,5 +24,17 @@ mesh = SubResource("PlaneMesh_ujtrj")
 transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 5.1, 0, -1, -0.31393266)
 mesh = SubResource("PlaneMesh_ujtrj")
 
+[node name="Sphere0" type="MeshInstance3D" parent="." unique_id=1306296247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.209248, 0.53583646, -0.16000581)
+mesh = SubResource("SphereMesh_st2d5")
+
+[node name="Sphere1" type="MeshInstance3D" parent="." unique_id=1387131724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.762989, 0.53583646, -0.7032125)
+mesh = SubResource("SphereMesh_st2d5")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2140297276]
 environment = SubResource("Environment_ujtrj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
+light_color = Color(0.6720365, 0.5958214, 0.4524824, 1)
+light_energy = 2.859
