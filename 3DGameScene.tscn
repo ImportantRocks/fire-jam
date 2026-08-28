@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dkhr0bjpu5jdq"]
+
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="1_letfk"]
+[ext_resource type="PackedScene" uid="uid://ji2kqt6ae2qm" path="res://Models/girl_a.tscn" id="2_letfk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
+
+[sub_resource type="Environment" id="Environment_ujtrj"]
+
+[node name="Node3D" type="Node3D" unique_id=2096510720]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1632006872]
+transform = Transform3D(7.6883535, 0, 0, 0, -4.371139e-08, -3.7395449, 0, 1, -1.634607e-07, 0, 3.361614, -4.340421)
+material_override = ExtResource("1_letfk")
+mesh = SubResource("PlaneMesh_ujtrj")
+surface_material_override/0 = ExtResource("1_letfk")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1607733672]
+transform = Transform3D(-2.356044e-07, 1, -1.9119112e-07, 0, -4.371139e-08, -4.373943, -5.3900003, -4.371139e-08, 8.357229e-15, -6.976151, 2.8930602, -0.31133032)
+material_override = ExtResource("1_letfk")
+mesh = SubResource("PlaneMesh_ujtrj")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1739720655]
+transform = Transform3D(-3.059797e-07, -1, 1.8343046e-07, 0, -4.371139e-08, -4.1963997, 7, -4.371139e-08, 8.0179995e-15, 5.3367205, 2.8930602, 3.0238223)
+material_override = ExtResource("1_letfk")
+mesh = SubResource("PlaneMesh_ujtrj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=505988903]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 6.7536955, 0, 0, -0.31393266)
+material_override = ExtResource("1_letfk")
+mesh = SubResource("PlaneMesh_ujtrj")
+surface_material_override/0 = ExtResource("1_letfk")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2140297276]
+environment = SubResource("Environment_ujtrj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.176464, 0)
+light_color = Color(0.8944776, 0.5343185, 0.31100973, 1)
+light_energy = 10.0
+shadow_enabled = true
+
+[node name="GirlA" parent="." unique_id=2130175865 instance=ExtResource("2_letfk")]
+transform = Transform3D(0.7144319, 0, 0.699705, 0, 1, 0, -0.699705, 0, 0.7144319, -1.5907258, -0.7129078, -1.9691045)
+
+[node name="GirlA2" parent="." unique_id=778305976 instance=ExtResource("2_letfk")]
+transform = Transform3D(0.6187654, 0, -0.7855758, 0, 1, 0, 0.7855758, 0, 0.6187654, 3.2857838, -0.69060016, 0.042479277)
