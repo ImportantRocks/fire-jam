@@ -13,6 +13,7 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * look_sensitivity)
 		camera.rotate_x(-event.relative.y * look_sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+		head.rotation.y = clamp(head.rotation.y, deg_to_rad(-80), deg_to_rad(80))
 
 # Called when the node enters the scene tree for the first time.
 #func _ready() -> void:

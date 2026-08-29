@@ -11,17 +11,6 @@
 [node name="Main" type="Node" unique_id=285457548]
 script = ExtResource("1_bvrni")
 
-[node name="3DGameScene" parent="." unique_id=2096510720 instance=ExtResource("1_st2d5")]
-
-[node name="Dialog" type="Control" parent="." unique_id=1434144997]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
 [node name="Player" type="AnimatableBody3D" parent="." unique_id=11112467]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45993233, 0)
 script = ExtResource("3_dp36p")
@@ -39,3 +28,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9169748, 3.6623902)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=704701703]
 current = true
+
+[node name="3DGameScene" parent="." unique_id=2096510720 instance=ExtResource("1_st2d5")]
+
+[node name="Dialog" type="Control" parent="." unique_id=1434144997]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
