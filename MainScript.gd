@@ -1,28 +1,30 @@
 extends Node
 
+var currentAnim
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _on_player_skip_to_end_dialog() -> void:
 	pass
-	
-	#camera controls here? 
+
+
+func _on_player_next_dialog() -> void:
+	pass # Replace with function body.
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Starting the game with the first dialog
-	get_tree().root.get_node("/root/Main/CanvasLayer/Dialog").add_child(DialogDb.dialog0)
-	var Anim = DialogDb.dialog0.get_node("AnimationPlayer")
-	Anim.animation_finished.connect(dialog1)
-	
-	
-	#connecting the animation finished signal to the next function
-	#DialogDb.dialog0._on_animation_finished.connect()
+	get_tree().root.get_node("/root/Main//Dialog").add_child(DialogDb.dialog0)
+	currentAnim = DialogDb.dialog0.get_node("AnimationPlayer")
+	currentAnim.animation_finished.connect(dialog1)
+	DialogDb.dialogPlaying = true
 
 
-func dialog1(string) -> void:
+func dialog1(_string) -> void:
+	#disconnect from signal
+	currentAnim.animation_finished.disconnect(dialog1)
 	#remove previous dialog child
-	get_tree().root.get_node("/root/Main/CanvasLayer/Dialog").remove_child(DialogDb.dialog0)
+	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.dialog0)
+	
 	#add new dialog child
-	get_tree().root.get_node("/root/Main/CanvasLayer/Dialog").add_child(DialogDb.dialog1)
+	get_tree().root.get_node("/root/Main//Dialog").add_child(DialogDb.dialog1)
