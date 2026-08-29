@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://ciju3yrgnc2xq"]
+[gd_scene format=3 uid="uid://brs752saygd0h"]
 
-[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://DialogSceneTemplate.tscn" id="1_mt20c"]
-[ext_resource type="Texture2D" uid="uid://chmoqcn4suh6m" path="res://amariLancer.png" id="2_gdri5"]
+[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://DialogSceneTemplate.tscn" id="1_03cri"]
+[ext_resource type="Texture2D" uid="uid://chmoqcn4suh6m" path="res://amariLancer.png" id="2_rhrem"]
 
-[node name="Control" unique_id=1665476786 instance=ExtResource("1_mt20c")]
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_03cri")]
 
 [node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
 text = "We're really cooking now"
@@ -17,4 +17,4 @@ offset_bottom = 968.0
 expand_mode = 2
 
 [node name="GirlB" parent="." index="3" unique_id=567935416]
-texture = ExtResource("2_gdri5")
+texture = ExtResource("2_rhrem")

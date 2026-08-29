@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://vcd1icled1ux"]
 
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://DialogSceneTemplate.tscn" id="1_we5m2"]
+[ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://IMG_2280.png" id="2_fbrpv"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_we5m2")]
 
 [node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
 text = "Oh yeah hell yeah"
+
+[node name="GirlA" parent="." index="2" unique_id=1133951958]
+texture = ExtResource("2_fbrpv")
