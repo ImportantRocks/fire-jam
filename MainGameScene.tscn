@@ -39,3 +39,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9169748, 3.6623902)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=704701703]
 current = true
+
+[connection signal="next_dialog" from="Player" to="." method="_on_player_next_dialog"]
+[connection signal="skip_to_end_dialog" from="Player" to="." method="_on_player_skip_to_end_dialog"]
