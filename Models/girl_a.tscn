@@ -5,6 +5,6 @@
 
 [node name="GirlA" unique_id=2130175865 instance=ExtResource("1_6i68f")]
 
-[node name="Cube" parent="." index="0" unique_id=662485543]
+[node name="Cube" parent="." index="0" unique_id=1383686037]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -1.2860332, 0.73624825, 0.23462343)
 material_override = ExtResource("2_naw8g")

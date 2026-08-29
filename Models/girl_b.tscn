@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://wr82jjeajvif"]
+
+[ext_resource type="PackedScene" uid="uid://12x8cjq7cr0x" path="res://Models/GirlB.fbx" id="1_8ufij"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_8yo0b"]
+
+[node name="GirlB" unique_id=564466425 instance=ExtResource("1_8ufij")]
+
+[node name="Cone" parent="." index="0" unique_id=541043398]
+material_override = ExtResource("2_8yo0b")

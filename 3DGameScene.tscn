@@ -2,6 +2,7 @@
 
 [ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="1_letfk"]
 [ext_resource type="PackedScene" uid="uid://ji2kqt6ae2qm" path="res://Models/girl_a.tscn" id="2_letfk"]
+[ext_resource type="PackedScene" uid="uid://wr82jjeajvif" path="res://Models/girl_b.tscn" id="3_0dmlb"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
@@ -43,5 +44,5 @@ shadow_enabled = true
 [node name="GirlA" parent="." unique_id=2130175865 instance=ExtResource("2_letfk")]
 transform = Transform3D(0.7144319, 0, 0.699705, 0, 1, 0, -0.699705, 0, 0.7144319, -1.5907258, -0.7129078, -1.9691045)
 
-[node name="GirlA2" parent="." unique_id=778305976 instance=ExtResource("2_letfk")]
-transform = Transform3D(0.6187654, 0, -0.7855758, 0, 1, 0, 0.7855758, 0, 0.6187654, 3.2857838, -0.69060016, 0.042479277)
+[node name="GirlB" parent="." unique_id=564466425 instance=ExtResource("3_0dmlb")]
+transform = Transform3D(0.72012174, 0, -0.6938478, 0, 1, 0, 0.6938478, 0, 0.72012174, 1.7203568, 0, -0.9846554)
