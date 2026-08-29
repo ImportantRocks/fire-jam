@@ -36,7 +36,7 @@ environment = SubResource("Environment_ujtrj")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.176464, 0)
-light_color = Color(0.8944776, 0.5343185, 0.31100973, 1)
+light_color = Color(0.5634999, 0.48020002, 0.98, 1)
 light_energy = 10.0
 shadow_enabled = true
 
