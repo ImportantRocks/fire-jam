@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dlm4mk7xruwoe"]
+
+[ext_resource type="PackedScene" uid="uid://sfxjde0aj125" path="res://Models/GirlARig.fbx" id="1_7dejc"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_psebg"]
+
+[node name="GirlARig" unique_id=1535236600 instance=ExtResource("1_7dejc")]
+
+[node name="Torus_002" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(989248475) index="0" unique_id=1129068088]
+material_override = ExtResource("2_psebg")
