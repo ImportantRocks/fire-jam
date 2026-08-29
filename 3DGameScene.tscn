@@ -38,8 +38,9 @@ environment = SubResource("Environment_ujtrj")
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.176464, 0)
 light_color = Color(0.5634999, 0.48020002, 0.98, 1)
-light_energy = 10.0
+light_energy = 8.0
 shadow_enabled = true
+omni_range = 8.0
 
 [node name="GirlA" parent="." unique_id=2130175865 instance=ExtResource("2_letfk")]
 transform = Transform3D(0.7144319, 0, 0.699705, 0, 1, 0, -0.699705, 0, 0.7144319, -1.5907258, -0.7129078, -1.9691045)
