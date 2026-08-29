@@ -2,9 +2,9 @@ extends Node
 
 var currentAnim
 
-
 func _on_player_skip_to_end_dialog() -> void:
-	pass # Replace with function body.
+	pass
+
 
 func _on_player_next_dialog() -> void:
 	pass # Replace with function body.
@@ -17,7 +17,7 @@ func _ready() -> void:
 	get_tree().root.get_node("/root/Main//Dialog").add_child(DialogDb.dialog0)
 	currentAnim = DialogDb.dialog0.get_node("AnimationPlayer")
 	currentAnim.animation_finished.connect(dialog1)
-	
+	DialogDb.dialogPlaying = true
 
 
 func dialog1(_string) -> void:

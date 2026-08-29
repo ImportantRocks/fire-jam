@@ -21,7 +21,8 @@ func _unhandled_input(event):
 		
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_SPACE:
-			print("Space pressed")
+			if DialogDb.dialogPlaying == true:
+				skip_to_end_dialog.emit()
 
 # Called when the node enters the scene tree for the first time.
 #func _ready() -> void:
