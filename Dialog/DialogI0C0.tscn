@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dqnwtrg51lph5"]
+
+[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_ld0rd"]
+
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_ld0rd")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "Ahh…"

@@ -17,6 +17,10 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 		head.rotation.y = clamp(head.rotation.y, deg_to_rad(-80), deg_to_rad(80))
 
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			print("esc")
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 # Called when the node enters the scene tree for the first time.
