@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://7aidwnare2qo"]
+
+[ext_resource type="PackedScene" uid="uid://clnjl6jutjgdb" path="res://Models/FireJamFire.fbx" id="1_63858"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_21vnh"]
+
+[node name="FireJamFire" unique_id=789278995 instance=ExtResource("1_63858")]
+
+[node name="Icosphere" parent="." index="0" unique_id=218127112]
+material_override = ExtResource("2_21vnh")
