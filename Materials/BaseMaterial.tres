@@ -8,5 +8,4 @@ metallic_specular = 0.0
 roughness = 0.0
 rim = 0.0
 rim_tint = 0.0
-refraction_enabled = true
 stencil_flags = 2
