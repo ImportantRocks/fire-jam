@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://qx6utrvr2psq"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_yjec5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ufe0f"]
+radius = 0.25
+
+[node name="Fire" type="Node3D" unique_id=1031200149]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=408809101]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1614906516]
+mesh = SubResource("TorusMesh_yjec5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1499420595]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ufe0f")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D" unique_id=1387173697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53265214, 0)
+light_color = Color(0.5517572, 0.4379951, 1, 1)
+light_energy = 10.0
+
+[node name="Timer" type="Timer" parent="." unique_id=974977932]
+wait_time = 60.0
+autostart = true
