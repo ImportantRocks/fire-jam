@@ -22,4 +22,4 @@ texture = ExtResource("2_y56cf")
 texture = ExtResource("3_r4lby")
 
 [node name="Timer" parent="." index="4" unique_id=1904116481]
-wait_time = 0.1
+wait_time = 0.4
