@@ -1,12 +1,6 @@
 extends Node
 
 
-#testing section ---
-var dialog0 = preload("res://Dialog/DialogS0C0.tscn").instantiate()
-var dialog1 = preload("res://Dialog/DialogS0C1.tscn").instantiate()
-var dialog2 = preload("res://Dialog/DialogS0C2.tscn").instantiate()
-
-
 #GirlTWarmer section ---
 var dialogGirlTWarmerC0 = preload("res://Dialog/DialogGirlTWarmerC0.tscn").instantiate()
 var dialogGirlTWarmerC1 = preload("res://Dialog/DialogGirlTWarmerC1.tscn").instantiate()
@@ -19,3 +13,17 @@ var dialogGirlTWarmerC7 = preload("res://Dialog/DialogGirlTWarmerC7.tscn").insta
 var dialogGirlTWarmerC8 = preload("res://Dialog/DialogGirlTWarmerC8.tscn").instantiate()
 var dialogGirlTWarmerC9 = preload("res://Dialog/DialogGirlTWarmerC9.tscn").instantiate()
 var dialogGirlTWarmerC10 = preload("res://Dialog/DialogGirlTWarmerC10.tscn").instantiate()
+var dialogGirlTWarmerC11 = preload("res://Dialog/DialogGirlTWarmerC11.tscn").instantiate()
+var dialogGirlTWarmerC12 = preload("res://Dialog/DialogGirlTWarmerC12.tscn").instantiate()
+var dialogGirlTWarmerC13 = preload("res://Dialog/DialogGirlTWarmerC13.tscn").instantiate()
+var dialogGirlTWarmerC14 = preload("res://Dialog/DialogGirlTWarmerC14.tscn").instantiate()
+var dialogGirlTWarmerC15 = preload("res://Dialog/DialogGirlTWarmerC15.tscn").instantiate()
+var dialogGirlTWarmerC16 = preload("res://Dialog/DialogGirlTWarmerC16.tscn").instantiate()
+var dialogGirlTWarmerC17 = preload("res://Dialog/DialogGirlTWarmerC17.tscn").instantiate()
+var dialogGirlTWarmerC18 = preload("res://Dialog/DialogGirlTWarmerC18.tscn").instantiate()
+var dialogGirlTWarmerC19 = preload("res://Dialog/DialogGirlTWarmerC19.tscn").instantiate()
+var dialogGirlTWarmerC20 = preload("res://Dialog/DialogGirlTWarmerC20.tscn").instantiate()
+var dialogGirlTWarmerC21 = preload("res://Dialog/DialogGirlTWarmerC21.tscn").instantiate()
+var dialogGirlTWarmerC22 = preload("res://Dialog/DialogGirlTWarmerC22.tscn").instantiate()
+var dialogGirlTWarmerC23 = preload("res://Dialog/DialogGirlTWarmerC23.tscn").instantiate()
+var dialogGirlTWarmerC24 = preload("res://Dialog/DialogGirlTWarmerC24.tscn").instantiate()
