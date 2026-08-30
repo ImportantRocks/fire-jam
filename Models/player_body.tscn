@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cx3qg2g2eafur"]
+
+[ext_resource type="PackedScene" uid="uid://dybwwsyv6scl0" path="res://Models/FireJamPlayerBody.fbx" id="1_wf58k"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_ji73f"]
+
+[node name="FireJamPlayerBody" unique_id=1563718036 instance=ExtResource("1_wf58k")]
+
+[node name="Torus_001" parent="." index="0" unique_id=1562836612]
+material_override = ExtResource("2_ji73f")

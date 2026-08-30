@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dpvxmyips2trf"]
+
+[ext_resource type="PackedScene" uid="uid://dodvw38gep7f" path="res://Models/FireJamStars.fbx" id="1_hdfmq"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_pxcjb"]
+
+[node name="FireJamStars" unique_id=303163140 instance=ExtResource("1_hdfmq")]
+
+[node name="Plane_007" parent="." index="0" unique_id=1394388146]
+transform = Transform3D(-8.150992, 8.635988, -2.4537849e-06, 3.5867555e-07, -2.1706092e-06, -11.87514, -8.635989, -8.150992, 1.4156271e-06, -9.536743e-07, 20.294615, 9.536743e-07)
+material_override = ExtResource("2_pxcjb")
