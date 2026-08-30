@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bhbak8ucsbeds"]
+
+[ext_resource type="PackedScene" uid="uid://nehllq7dkaui" path="res://Models/FireJamLogs.fbx" id="1_3uv28"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_keypq"]
+
+[node name="FireJamLogs" unique_id=1095830420 instance=ExtResource("1_3uv28")]
+
+[node name="Cube_009" parent="." index="0" unique_id=683273400]
+material_override = ExtResource("2_keypq")

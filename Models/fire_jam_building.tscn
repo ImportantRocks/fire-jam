@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bkf22vr8gu51t"]
 
-[ext_resource type="PackedScene" uid="uid://boqxle4v4c8jm" path="res://Models/FireJamBuilding.fbx" id="1_s50wg"]
+[ext_resource type="PackedScene" uid="uid://h42remjcuwqy" path="res://Models/FireJamBuilding.fbx" id="1_s50wg"]
 [ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_tiw1s"]
 
-[node name="FireJamBuilding" unique_id=340383918 instance=ExtResource("1_s50wg")]
+[node name="FireJamBuilding" unique_id=1827778891 instance=ExtResource("1_s50wg")]
 
-[node name="Cube_004" parent="." index="0" unique_id=476798130]
+[node name="Cube_006" parent="." index="0" unique_id=94088310]
 material_override = ExtResource("2_tiw1s")
