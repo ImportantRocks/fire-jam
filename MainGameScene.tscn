@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dgbtb6tqohwjw" path="res://Scripts/MainScript.gd" id="1_bvrni"]
 [ext_resource type="PackedScene" uid="uid://dkhr0bjpu5jdq" path="res://3DGameScene.tscn" id="1_st2d5"]
 [ext_resource type="Script" uid="uid://ool6y32g5o1e" path="res://Scripts/animatable_body_3d.gd" id="3_dp36p"]
+[ext_resource type="AudioStream" uid="uid://c2m3j2ocuh5xu" path="res://FireJamGameMusic.wav" id="4_t7cbl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yjec5"]
 
@@ -39,3 +40,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9169748, 3.6623902)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=704701703]
 current = true
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1414581414]
+stream = ExtResource("4_t7cbl")
+autoplay = true

@@ -2,11 +2,44 @@ extends Node
 
 var currentAnim
 var currentTimer
+var currentAudioPlayer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	dialogGirlTWarmerC0()
+	#playDialog("GirlTWarmerC1", "GirlTWarmerC0")
+
+
+
+#messing with better dialog script
+func playDialog(dialogC:String, prevDialogC:String):
+	
+	var currentDialogC = "dialog" + dialogC
+	var previousDialogC = "dialog" + prevDialogC
+	
+	#disconnect from previous timer signal
+	currentTimer.timeout.disconnect(currentDialogC)
+	
+	#remove previous dialog child
+	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.previousDialogC)
+	#add new dialog child
+	get_tree().root.get_node("/root/Main/Dialog").add_child(DialogDb.currentDialogC)
+	
+	#set animation ref as currentAnim
+	currentAnim = DialogDb.currentDialogC.get_node("AnimationPlayer")
+	currentTimer = DialogDb.currentDialogC.get_node("Timer")
+	currentAudioPlayer = DialogDb.currentDialogC.get_node("AudioStreamPlayer")
+	
+	#connect end animation signal to start timer
+	currentAnim.animation_finished.connect(dialogGirlTWarmerC2TimerStart)
+
+
+
+
+
+
+
 
 
 	
@@ -18,12 +51,14 @@ func dialogGirlTWarmerC0():
 	#set animation and timer ref as variables
 	currentAnim = DialogDb.dialogGirlTWarmerC0.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC0.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC0.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC0TimerStart)
 
 func dialogGirlTWarmerC0TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC0TimerStart)
 	#connect next dialog to timer timeout signal
@@ -43,12 +78,14 @@ func dialogGirlTWarmerC1():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC1.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC1.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC1.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC1TimerStart)
 	
 func dialogGirlTWarmerC1TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC1TimerStart)
 	#connect next dialog to timer timeout signal
@@ -67,12 +104,14 @@ func dialogGirlTWarmerC2():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC2.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC2.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC2.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC2TimerStart)
 	
 func dialogGirlTWarmerC2TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC2TimerStart)
 	#connect next dialog to timer timeout signal
@@ -97,6 +136,7 @@ func dialogGirlTWarmerC3():
 	
 func dialogGirlTWarmerC3TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC3TimerStart)
 	#connect next dialog to timer timeout signal
@@ -122,6 +162,7 @@ func dialogGirlTWarmerC4():
 	
 func dialogGirlTWarmerC4TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC4TimerStart)
 	#connect next dialog to timer timeout signal
@@ -146,6 +187,7 @@ func dialogGirlTWarmerC5():
 	
 func dialogGirlTWarmerC5TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC5TimerStart)
 	#connect next dialog to timer timeout signal
@@ -170,6 +212,7 @@ func dialogGirlTWarmerC6():
 	
 func dialogGirlTWarmerC6TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC6TimerStart)
 	#connect next dialog to timer timeout signal
@@ -195,6 +238,7 @@ func dialogGirlTWarmerC7():
 	
 func dialogGirlTWarmerC7TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC7TimerStart)
 	#connect next dialog to timer timeout signal
@@ -220,6 +264,7 @@ func dialogGirlTWarmerC8():
 	
 func dialogGirlTWarmerC8TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC8TimerStart)
 	#connect next dialog to timer timeout signal
@@ -245,6 +290,7 @@ func dialogGirlTWarmerC9():
 	
 func dialogGirlTWarmerC9TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC9TimerStart)
 	#connect next dialog to timer timeout signal
@@ -270,6 +316,7 @@ func dialogGirlTWarmerC10():
 	
 func dialogGirlTWarmerC10TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC10TimerStart)
 	#connect next dialog to timer timeout signal
@@ -295,6 +342,7 @@ func dialogGirlTWarmerC11():
 	
 func dialogGirlTWarmerC11TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC11TimerStart)
 	#connect next dialog to timer timeout signal
@@ -320,6 +368,7 @@ func dialogGirlTWarmerC12():
 	
 func dialogGirlTWarmerC12TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC12TimerStart)
 	#connect next dialog to timer timeout signal
@@ -345,6 +394,7 @@ func dialogGirlTWarmerC13():
 	
 func dialogGirlTWarmerC13TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC13TimerStart)
 	#connect next dialog to timer timeout signal
@@ -370,6 +420,7 @@ func dialogGirlTWarmerC14():
 	
 func dialogGirlTWarmerC14TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC14TimerStart)
 	#connect next dialog to timer timeout signal
@@ -395,6 +446,7 @@ func dialogGirlTWarmerC15():
 	
 func dialogGirlTWarmerC15TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC15TimerStart)
 	#connect next dialog to timer timeout signal
@@ -420,6 +472,7 @@ func dialogGirlTWarmerC16():
 	
 func dialogGirlTWarmerC16TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC16TimerStart)
 	#connect next dialog to timer timeout signal
@@ -446,6 +499,7 @@ func dialogGirlTWarmerC17():
 	
 func dialogGirlTWarmerC17TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC17TimerStart)
 	#connect next dialog to timer timeout signal
@@ -471,6 +525,7 @@ func dialogGirlTWarmerC18():
 	
 func dialogGirlTWarmerC18TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC18TimerStart)
 	#connect next dialog to timer timeout signal
@@ -496,6 +551,7 @@ func dialogGirlTWarmerC19():
 	
 func dialogGirlTWarmerC19TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC19TimerStart)
 	#connect next dialog to timer timeout signal
@@ -521,6 +577,7 @@ func dialogGirlTWarmerC20():
 	
 func dialogGirlTWarmerC20TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC20TimerStart)
 	#connect next dialog to timer timeout signal
@@ -546,6 +603,7 @@ func dialogGirlTWarmerC21():
 	
 func dialogGirlTWarmerC21TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC21TimerStart)
 	#connect next dialog to timer timeout signal
@@ -571,6 +629,7 @@ func dialogGirlTWarmerC22():
 	
 func dialogGirlTWarmerC22TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC22TimerStart)
 	#connect next dialog to timer timeout signal
@@ -596,6 +655,7 @@ func dialogGirlTWarmerC23():
 	
 func dialogGirlTWarmerC23TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC23TimerStart)
 	#connect next dialog to timer timeout signal
@@ -621,6 +681,7 @@ func dialogGirlTWarmerC24():
 	
 func dialogGirlTWarmerC24TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC24TimerStart)
 	#connect next dialog to timer timeout signal
