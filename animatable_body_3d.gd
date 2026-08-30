@@ -4,6 +4,9 @@ extends AnimatableBody3D
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var raycast = $Head/Camera3D/RayCast3D
+@onready var hand = $Head/Hand
+
 
 
 
@@ -25,5 +28,12 @@ func _unhandled_input(event):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
+func _process(delta):
+	var object = raycast.get_collider()
+	if raycast.is_colliding():
+		if object.is_in_group("pickable"):
+			if Input.is_action_pressed("Interact"):
+				object.global_position = hand.global_position
+				object.global_rotation = hand.global_rotation
+				object.collision_layer = 2
 	#pass

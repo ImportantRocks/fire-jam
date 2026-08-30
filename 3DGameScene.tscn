@@ -5,6 +5,9 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_letfk"]
+points = PackedVector3Array(1.0158731, 0.015873017, 1.0158731, -1.0158731, -0.015873017, -1.0158731, -1.0158731, 0.015873017, -1.0158731, 1.0158731, -0.015873017, -1.0158731, -1.0158731, -0.015873017, 1.0158731, -1.0158731, 0.015873017, 1.0158731, 1.0158731, 0.015873017, -1.0158731, 1.0158731, -0.015873017, 1.0158731)
+
 [sub_resource type="Environment" id="Environment_ujtrj"]
 
 [node name="Node3D" type="Node3D" unique_id=2096510720]
@@ -31,14 +34,13 @@ material_override = ExtResource("1_letfk")
 mesh = SubResource("PlaneMesh_ujtrj")
 surface_material_override/0 = ExtResource("1_letfk")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2" unique_id=783999406]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D" unique_id=951621228]
+shape = SubResource("ConvexPolygonShape3D_letfk")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2140297276]
 environment = SubResource("Environment_ujtrj")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.176464, 0)
-light_color = Color(0.8944776, 0.5343185, 0.31100973, 1)
-light_energy = 10.0
-shadow_enabled = true
 
 [node name="GirlA" parent="." unique_id=2130175865 instance=ExtResource("2_letfk")]
 transform = Transform3D(0.7144319, 0, 0.699705, 0, 1, 0, -0.699705, 0, 0.7144319, -1.5907258, -0.7129078, -1.9691045)
