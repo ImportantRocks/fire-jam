@@ -17,17 +17,17 @@ mesh = SubResource("PlaneMesh_ujtrj")
 surface_material_override/0 = ExtResource("1_letfk")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1607733672]
-transform = Transform3D(-2.356044e-07, 1, -1.9119112e-07, 0, -4.371139e-08, -4.373943, -5.3900003, -4.371139e-08, 8.357229e-15, -6.976151, 2.8930602, -0.31133032)
+transform = Transform3D(-7.722895e-07, 1, -2.905377e-07, 0, -4.371139e-08, -6.6467276, -17.667925, -4.371139e-08, 1.2699806e-14, -8.103165, 4.2835913, 3.375795)
 material_override = ExtResource("1_letfk")
 mesh = SubResource("PlaneMesh_ujtrj")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1739720655]
-transform = Transform3D(-3.059797e-07, -1, 1.8343046e-07, 0, -4.371139e-08, -4.1963997, 7, -4.371139e-08, 8.0179995e-15, 5.3367205, 2.8930602, 3.0238223)
+transform = Transform3D(-4.7857844e-07, -1, 1.8343046e-07, 0, -4.371139e-08, -4.1963997, 10.948599, -4.371139e-08, 8.0179995e-15, 5.3367205, 2.8930602, 4.1409264)
 material_override = ExtResource("1_letfk")
 mesh = SubResource("PlaneMesh_ujtrj")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=505988903]
-transform = Transform3D(6.9999995, 0, 0, 0, 1, 0, 0, 0, 6.7536955, -0.04116738, -0.032531023, -0.30028296)
+transform = Transform3D(21.00151, 0, 0, 0, 1, 0, 0, 0, 21.544695, -0.04116738, -0.032531023, -0.30028296)
 material_override = ExtResource("1_letfk")
 mesh = SubResource("PlaneMesh_ujtrj")
 surface_material_override/0 = ExtResource("1_letfk")

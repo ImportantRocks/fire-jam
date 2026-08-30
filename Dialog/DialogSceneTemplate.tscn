@@ -103,7 +103,7 @@ texture = ExtResource("3_q56t8")
 libraries/ = SubResource("AnimationLibrary_1vt4a")
 autoplay = &"TextScroll"
 
-[node name="GirlA" type="TextureRect" parent="." unique_id=1133951958]
+[node name="GirlT" type="TextureRect" parent="." unique_id=1133951958]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -115,7 +115,7 @@ offset_bottom = -112.0
 grow_vertical = 0
 expand_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="GirlA" unique_id=442938872]
+[node name="TextureRect" type="TextureRect" parent="GirlT" unique_id=442938872]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
