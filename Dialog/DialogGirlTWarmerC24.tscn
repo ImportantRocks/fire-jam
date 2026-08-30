@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bjl8wqlxc8for"]
+
+[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_yhsth"]
+
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_yhsth")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "She folds her hands in her lap. At once, she 
+is far away again."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 1.1

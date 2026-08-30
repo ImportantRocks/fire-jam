@@ -6,6 +6,11 @@ var currentTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	dialog0()
+
+#Testing Section
+
+func dialog0():
 	#Starting the game with the first dialog
 	get_tree().root.get_node("/root/Main//Dialog").add_child(DialogDb.dialog0)
 	
@@ -22,7 +27,6 @@ func dialog0TimerStart(_string):
 	currentAnim.animation_finished.disconnect(dialog0TimerStart)
 	#connect next dialog to timer timeout signal
 	currentTimer.timeout.connect(dialog1)
-
 
 
 

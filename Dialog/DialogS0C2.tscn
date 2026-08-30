@@ -9,16 +9,8 @@
 [node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
 text = "I'll say!!"
 
-[node name="Panel_HBoxContainer#GirlA" type="TextureRect" parent="." index="2" unique_id=1133951958]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 743.0
-offset_right = 615.0
-offset_bottom = 968.0
-expand_mode = 2
-
-[node name="GirlA" parent="." index="3" unique_id=1133951958]
+[node name="GirlT" parent="." index="2" unique_id=1133951958]
 texture = ExtResource("2_03cri")
 
-[node name="TextureRect" parent="GirlA" index="0" unique_id=442938872]
+[node name="TextureRect" parent="GirlT" index="0" unique_id=442938872]
 texture = ExtResource("3_rhrem")
