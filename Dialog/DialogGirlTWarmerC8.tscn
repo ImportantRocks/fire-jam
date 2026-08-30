@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://p2ysot54yjcr"]
+
+[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_k86io"]
+[ext_resource type="Texture2D" uid="uid://d21gbjg7jnkf0" path="res://Textures/GirlB.png" id="2_y56cf"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_r4lby"]
+
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_k86io")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "The more those molecules start to get fucked 
+up. Ramming into each other, coming apart, 
+turning into something they’re not.      
+The same thing that’s -"
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.5
+
+[node name="GirlB" parent="." index="3" unique_id=567935416]
+texture = ExtResource("2_y56cf")
+
+[node name="TextureRect" parent="GirlB" index="0" unique_id=242748580]
+texture = ExtResource("3_r4lby")
+
+[node name="Timer" parent="." index="4" unique_id=1904116481]
+wait_time = 0.4

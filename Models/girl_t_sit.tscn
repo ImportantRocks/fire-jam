@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlm4mk7xruwoe"]
 
-[ext_resource type="PackedScene" uid="uid://sfxjde0aj125" path="res://Models/GirlASit.fbx" id="1_7dejc"]
+[ext_resource type="PackedScene" uid="uid://sfxjde0aj125" path="res://Models/GirlTSit.fbx" id="1_7dejc"]
 [ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_psebg"]
 
 [node name="GirlARig" unique_id=1535236600 instance=ExtResource("1_7dejc")]

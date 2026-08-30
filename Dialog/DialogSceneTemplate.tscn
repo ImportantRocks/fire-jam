@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://b87h45pqp3uyh"]
 
+[ext_resource type="Theme" uid="uid://bnaukh4fqdktc" path="res://DialogTextTheme.tres" id="1_sye0q"]
+[ext_resource type="FontFile" uid="uid://ct54mt3g8pj2u" path="res://Irisdot-H21.ttf" id="2_q56t8"]
+[ext_resource type="Texture2D" uid="uid://ccgff20plb6et" path="res://Textures/TexttBorder.png" id="3_q56t8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etnfi"]
+bg_color = Color(0.16924527, 0.16924533, 0.16924518, 1)
+border_color = Color(0.30692264, 0.30692273, 0.30692244, 1)
+
 [sub_resource type="Animation" id="Animation_xo11j"]
 length = 0.001
 tracks/0/type = "value"
@@ -17,7 +25,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_h00se"]
 resource_name = "TextScroll"
-length = 4.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -25,7 +33,7 @@ tracks/0/path = NodePath("Panel/MarginContainer/RichTextLabel:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -47,17 +55,18 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Panel" type="Panel" parent="." unique_id=187063093]
-self_modulate = Color(1, 1, 1, 0.38039216)
+self_modulate = Color(1, 1, 1, 0.70980394)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 615.0
+offset_left = 630.0
 offset_top = 743.0
-offset_right = -646.0
+offset_right = -631.00024
 offset_bottom = -112.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_etnfi")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=644136543]
 layout_mode = 1
@@ -69,40 +78,72 @@ offset_right = 329.5
 offset_bottom = 225.0
 grow_horizontal = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer" unique_id=1764349102]
 layout_mode = 2
+theme = ExtResource("1_sye0q")
+theme_override_fonts/normal_font = ExtResource("2_q56t8")
+theme_override_font_sizes/normal_font_size = 30
 text = "Oh yeah"
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1468835872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_q56t8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=905030831]
 libraries/ = SubResource("AnimationLibrary_1vt4a")
 autoplay = &"TextScroll"
 
-[node name="GirlA" type="TextureRect" parent="." unique_id=1133951958]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 743.0
-offset_right = 615.0
-offset_bottom = 968.0
+[node name="GirlT" type="TextureRect" parent="." unique_id=1133951958]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 405.0
+offset_top = -337.0
+offset_right = 630.0
+offset_bottom = -112.0
+grow_vertical = 0
 expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GirlT" unique_id=442938872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="GirlB" type="TextureRect" parent="." unique_id=567935416]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 3
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -646.0
-offset_top = 203.0
-offset_right = -421.0
-offset_bottom = 428.0
+anchor_bottom = 1.0
+offset_left = -631.0
+offset_top = -337.0
+offset_right = -406.0
+offset_bottom = -112.0
 grow_horizontal = 0
-grow_vertical = 2
+grow_vertical = 0
 expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GirlB" unique_id=242748580]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Timer" type="Timer" parent="." unique_id=1904116481]
