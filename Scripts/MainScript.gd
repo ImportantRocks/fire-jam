@@ -2,6 +2,7 @@ extends Node
 
 var currentAnim
 var currentTimer
+var currentAudioPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,12 +19,14 @@ func dialogGirlTWarmerC0():
 	#set animation and timer ref as variables
 	currentAnim = DialogDb.dialogGirlTWarmerC0.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC0.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC0.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC0TimerStart)
 
 func dialogGirlTWarmerC0TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC0TimerStart)
 	#connect next dialog to timer timeout signal
@@ -43,12 +46,14 @@ func dialogGirlTWarmerC1():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC1.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC1.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC1.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC1TimerStart)
 	
 func dialogGirlTWarmerC1TimerStart(_string):
 	currentTimer.start()
+	currentAudioPlayer.stop()
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC1TimerStart)
 	#connect next dialog to timer timeout signal

@@ -147,3 +147,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Timer" type="Timer" parent="." unique_id=1904116481]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2079451254]
+autoplay = true
