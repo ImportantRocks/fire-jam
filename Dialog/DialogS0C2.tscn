@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brs752saygd0h"]
 
-[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://DialogSceneTemplate.tscn" id="1_03cri"]
+[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_03cri"]
 [ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://Textures/GirlA.png" id="2_03cri"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_03cri")]
