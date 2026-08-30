@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://coidrm5rkn5al"]
+
+[ext_resource type="PackedScene" uid="uid://bv27vogahi2nu" path="res://Models/GirlBSit.fbx" id="1_84csp"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_agyln"]
+
+[node name="GirlBSit" unique_id=1914595786 instance=ExtResource("1_84csp")]
+
+[node name="Cone" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(425066830) index="0" unique_id=1862071233]
+material_override = ExtResource("2_agyln")
