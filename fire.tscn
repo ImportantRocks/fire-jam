@@ -22,10 +22,11 @@ shape = SubResource("CapsuleShape3D_ufe0f")
 [node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D" unique_id=1387173697]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53265214, 0)
 light_color = Color(0.5517572, 0.4379951, 1, 1)
-light_energy = 8.0
+light_energy = 6.0
+omni_range = 10.0
 
 [node name="Timer" type="Timer" parent="." unique_id=974977932]
-wait_time = 60.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
