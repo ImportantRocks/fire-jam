@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dqnwtrg51lph5"]
+
+[ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_vwu11"]
+[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://FireJamDialogT.wav" id="4_qk56o"]
+
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_vwu11")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "You know how heat is just energy?      
+When we feel warm, it’s because the 
+molecules of our bodies are moving. "
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.5
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_qk56o")

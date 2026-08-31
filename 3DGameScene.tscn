@@ -24,13 +24,6 @@ surface_material_override/0 = ExtResource("1_letfk")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2140297276]
 environment = SubResource("Environment_ujtrj")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2117712093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.176464, 0)
-light_color = Color(0.5634999, 0.48020002, 0.98, 1)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 8.0
-
 [node name="GirlARig" parent="." unique_id=1535236600 instance=ExtResource("3_mdw8m")]
 transform = Transform3D(0.41575927, -0.040628545, 0.9085667, 0.019003727, 0.9991717, 0.035984047, -0.90927607, 0.0023054488, 0.41618696, -3.0538237, -0.871241, -2.101564)
 
