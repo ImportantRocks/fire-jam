@@ -11,6 +11,8 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t7cbl"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_ujtrj"]
+
 [node name="Main" type="Node" unique_id=285457548]
 script = ExtResource("1_bvrni")
 
@@ -52,4 +54,8 @@ autoplay = true
 
 [node name="InteractableSphere" parent="." unique_id=1016576797 instance=ExtResource("8_ccfle")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.5414937, 3.1440175, 1.8115084)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1441291834]
+transform = Transform3D(2.0543704, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43189907, 4.379346)
+mesh = SubResource("BoxMesh_ujtrj")
 prompt_message = "Grab Log"
