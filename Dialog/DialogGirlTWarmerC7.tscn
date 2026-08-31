@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_skneu"]
 [ext_resource type="Texture2D" uid="uid://d21gbjg7jnkf0" path="res://Textures/GirlB.png" id="2_b5vlo"]
 [ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_elas5"]
+[ext_resource type="AudioStream" uid="uid://bpy1vwxp7uih3" path="res://FireJamDialogB.wav" id="4_elas5"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_skneu")]
 
@@ -19,3 +20,6 @@ texture = ExtResource("2_b5vlo")
 
 [node name="TextureRect" parent="GirlB" index="0" unique_id=242748580]
 texture = ExtResource("3_elas5")
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_elas5")
