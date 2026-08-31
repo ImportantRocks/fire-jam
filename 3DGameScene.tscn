@@ -13,6 +13,9 @@
 background_mode = 1
 ambient_light_source = 2
 
+[sub_resource type="BoxMesh" id="BoxMesh_ujtrj"]
+size = Vector3(1.1297607, 1, 1.7836914)
+
 [node name="Node3D" type="Node3D" unique_id=2096510720]
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=505988903]
@@ -52,3 +55,7 @@ spot_angle = 74.09
 
 [node name="FireJamLogs" parent="." unique_id=169186498 instance=ExtResource("6_d4bw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9841032, 0, 1.6729534)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=532384681]
+transform = Transform3D(0.8904809, 0, -0.45502067, 0, 1.0935853, 0, 0.45502067, 0, 0.8904809, -3.0817719, 0.44281685, -2.2130764)
+mesh = SubResource("BoxMesh_ujtrj")
