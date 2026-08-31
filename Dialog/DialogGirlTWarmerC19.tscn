@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://p1dvvjqa82jn"]
 
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_n5myd"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_3mua0"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_n5myd")]
 
@@ -11,3 +12,6 @@ shadows between her fingers."
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
 speed_scale = 0.8
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_3mua0")

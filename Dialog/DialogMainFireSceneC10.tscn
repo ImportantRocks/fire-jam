@@ -11,5 +11,8 @@ the darkness. A curl of smoke drifts from
 her direction, feeding the river flowing from 
 the campfire up to the stars."
 
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.595
+
 [node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
 stream = ExtResource("2_4l0wf")

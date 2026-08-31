@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjxwdg6n8k0cx"]
 
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_c5o6g"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_1m7l0"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_c5o6g")]
 
@@ -11,3 +12,6 @@ each carefully back into her mittens. "
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
 speed_scale = 0.7
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_1m7l0")

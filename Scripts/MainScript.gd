@@ -1098,7 +1098,7 @@ func dialogMainFireSceneC41TimerStart(_string):
 	#connect next dialog to timer timeout signal
 	
 	#This will jump to the next scene
-	#currentTimer.timeout.connect(dialogMainFireSceneC42)
+	currentTimer.timeout.connect(dialogGirlTWarmerC0)
 
 
 
@@ -1113,13 +1113,18 @@ func dialogMainFireSceneC41TimerStart(_string):
 
 
 
-	
+
 	#GirlTWarmer section ---
 func dialogGirlTWarmerC0():
-	#Starting the game with the first dialog
+	#disconnect from previous timer signal
+	currentTimer.timeout.disconnect(dialogGirlTWarmerC0)
+	
+	#remove previous dialog child
+	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.dialogMainFireSceneC41)
+	#add new dialog child
 	get_tree().root.get_node("/root/Main/Dialog").add_child(DialogDb.dialogGirlTWarmerC0)
 	
-	#set animation and timer ref as variables
+	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC0.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC0.get_node("Timer")
 	currentAudioPlayer = DialogDb.dialogGirlTWarmerC0.get_node("AudioStreamPlayer")
@@ -1201,6 +1206,7 @@ func dialogGirlTWarmerC3():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC3.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC3.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC3.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC3TimerStart)
@@ -1227,6 +1233,7 @@ func dialogGirlTWarmerC4():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC4.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC4.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC4.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC4TimerStart)
@@ -1252,6 +1259,7 @@ func dialogGirlTWarmerC5():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC5.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC5.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC5.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC5TimerStart)
@@ -1277,6 +1285,7 @@ func dialogGirlTWarmerC6():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC6.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC6.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC6.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC6TimerStart)
@@ -1303,6 +1312,7 @@ func dialogGirlTWarmerC7():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC7.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC7.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC7.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC7TimerStart)
@@ -1329,6 +1339,7 @@ func dialogGirlTWarmerC8():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC8.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC8.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC8.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC8TimerStart)
@@ -1355,6 +1366,7 @@ func dialogGirlTWarmerC9():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC9.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC9.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC9.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC9TimerStart)
@@ -1381,6 +1393,7 @@ func dialogGirlTWarmerC10():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC10.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC10.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC10.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC10TimerStart)
@@ -1407,6 +1420,7 @@ func dialogGirlTWarmerC11():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC11.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC11.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC11.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC11TimerStart)
@@ -1433,6 +1447,7 @@ func dialogGirlTWarmerC12():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC12.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC12.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC12.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC12TimerStart)
@@ -1459,6 +1474,7 @@ func dialogGirlTWarmerC13():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC13.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC13.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC13.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC13TimerStart)
@@ -1485,6 +1501,7 @@ func dialogGirlTWarmerC14():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC14.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC14.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC14.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC14TimerStart)
@@ -1511,6 +1528,7 @@ func dialogGirlTWarmerC15():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC15.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC15.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC15.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC15TimerStart)
@@ -1537,6 +1555,7 @@ func dialogGirlTWarmerC16():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC16.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC16.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC16.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC16TimerStart)
@@ -1564,6 +1583,7 @@ func dialogGirlTWarmerC17():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC17.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC17.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC17.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC17TimerStart)
@@ -1590,6 +1610,7 @@ func dialogGirlTWarmerC18():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC18.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC18.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC18.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC18TimerStart)
@@ -1616,6 +1637,7 @@ func dialogGirlTWarmerC19():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC19.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC19.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC19.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC19TimerStart)
@@ -1642,6 +1664,7 @@ func dialogGirlTWarmerC20():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC20.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC20.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC20.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC20TimerStart)
@@ -1668,6 +1691,7 @@ func dialogGirlTWarmerC21():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC21.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC21.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC21.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC21TimerStart)
@@ -1694,6 +1718,7 @@ func dialogGirlTWarmerC22():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC22.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC22.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC22.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC22TimerStart)
@@ -1720,6 +1745,7 @@ func dialogGirlTWarmerC23():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC23.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC23.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC23.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC23TimerStart)
@@ -1746,6 +1772,7 @@ func dialogGirlTWarmerC24():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogGirlTWarmerC24.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogGirlTWarmerC24.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogGirlTWarmerC24.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC24TimerStart)

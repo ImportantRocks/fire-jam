@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bjl8wqlxc8for"]
 
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_yhsth"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_07rmu"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_yhsth")]
 
@@ -10,3 +11,6 @@ is far away again."
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
 speed_scale = 1.1
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_07rmu")

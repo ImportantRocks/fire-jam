@@ -95,9 +95,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -5.857788
+offset_top = -2.0
+offset_right = 2.928894
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_q56t8")
+expand_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=905030831]
 libraries/ = SubResource("AnimationLibrary_1vt4a")
@@ -120,8 +125,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 3.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 2
 
 [node name="GirlB" type="TextureRect" parent="." unique_id=567935416]
 layout_mode = 1
@@ -143,8 +153,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 2
 
 [node name="Timer" type="Timer" parent="." unique_id=1904116481]
 
