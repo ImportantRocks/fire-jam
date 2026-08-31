@@ -24,7 +24,7 @@ light_energy = 6.0
 omni_range = 10.0
 
 [node name="Timer" type="Timer" parent="." unique_id=974977932]
-wait_time = 5.0
+wait_time = 60.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

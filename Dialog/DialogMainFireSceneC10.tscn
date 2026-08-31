@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5ilwxldr5440"]
+
+[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_4t1ta"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_4l0wf"]
+
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_4t1ta")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "She leans back, returned to half-mystery in 
+the darkness. A curl of smoke drifts from 
+her direction, feeding the river flowing from 
+the campfire up to the stars."
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_4l0wf")

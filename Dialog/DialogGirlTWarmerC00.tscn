@@ -1,8 +1,6 @@
-[gd_scene format=3 uid="uid://cvnt6codbjoru"]
+[gd_scene format=3 uid="uid://dqnwtrg51lph5"]
 
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_vwu11"]
-[ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://Textures/GirlT.png" id="2_fc84n"]
-[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_qk56o"]
 [ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://FireJamDialogT.wav" id="4_qk56o"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_vwu11")]
@@ -14,12 +12,6 @@ molecules of our bodies are moving. "
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
 speed_scale = 0.5
-
-[node name="GirlT" parent="." index="2" unique_id=1133951958]
-texture = ExtResource("2_fc84n")
-
-[node name="TextureRect" parent="GirlT" index="0" unique_id=442938872]
-texture = ExtResource("3_qk56o")
 
 [node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
 stream = ExtResource("4_qk56o")

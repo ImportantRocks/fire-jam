@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://da5t10ynnfhmy"]
+
+[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_ok6sn"]
+[ext_resource type="Texture2D" uid="uid://d21gbjg7jnkf0" path="res://Textures/GirlB.png" id="2_nnjgx"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_rono0"]
+[ext_resource type="AudioStream" uid="uid://bpy1vwxp7uih3" path="res://FireJamDialogB.wav" id="4_rono0"]
+
+[node name="Control" unique_id=1665476786 instance=ExtResource("1_ok6sn")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "It’s good for something."
+
+[node name="GirlB" parent="." index="3" unique_id=567935416]
+texture = ExtResource("2_nnjgx")
+
+[node name="TextureRect" parent="GirlB" index="0" unique_id=242748580]
+texture = ExtResource("3_rono0")
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_rono0")
