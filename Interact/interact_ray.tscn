@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bv56qh1ryu2hd"]
+
+[ext_resource type="Script" uid="uid://086svssyf16k" path="res://Interact/interact_ray.gd" id="1_jmrxg"]
+
+[node name="InteractRay" type="RayCast3D" unique_id=1896232478]
+target_position = Vector3(0, 0, -4)
+script = ExtResource("1_jmrxg")
+
+[node name="Prompt" type="Label" parent="." unique_id=2108927420]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -46.5
+offset_right = 108.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+text = "INTERACT KEY"

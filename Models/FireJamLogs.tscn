@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bhbak8ucsbeds"]
+
+[ext_resource type="PackedScene" uid="uid://nehllq7dkaui" path="res://Models/FireJamLogs.fbx" id="1_3uv28"]
+[ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="2_keypq"]
+[ext_resource type="Script" uid="uid://dj7mpqqvhoina" path="res://Interact/interactable.gd" id="2_s4dbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_osbk4"]
+radius = 0.010035254
+height = 0.020817447
+
+[node name="FireJamLogs" unique_id=1095830420 instance=ExtResource("1_3uv28")]
+script = ExtResource("2_s4dbx")
+
+[node name="Cube_009" parent="." index="0" unique_id=224864808]
+material_override = ExtResource("2_keypq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_009" index="0" unique_id=1313107874]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.00040872302, -0.00018690433, -0.004043071)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_009/StaticBody3D" index="0" unique_id=1553755661]
+shape = SubResource("CapsuleShape3D_osbk4")
