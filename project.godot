@@ -18,6 +18,7 @@ config/icon="res://Textures/icon.svg"
 [autoload]
 
 DialogDb="*uid://c7s30arvik7h6"
+Global="*uid://dr6wpdx7vvwle"
 
 [display]
 

@@ -10,4 +10,4 @@ signal interacted(body)
 func interact(body):
 	print(body.name, " interacted with ", name)
 	interacted.emit(body)
-	DialogDb.fireup.emit()
+	Global.fireup.emit()
