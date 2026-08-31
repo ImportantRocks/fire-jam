@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dlm4mk7xruwoe" path="res://Models/girl_t_sit.tscn" id="3_mdw8m"]
 [ext_resource type="PackedScene" uid="uid://bkf22vr8gu51t" path="res://Models/fire_jam_building.tscn" id="4_mdw8m"]
 [ext_resource type="PackedScene" uid="uid://dpvxmyips2trf" path="res://Models/fire_jam_stars.tscn" id="5_lw2qh"]
-[ext_resource type="PackedScene" uid="uid://bhbak8ucsbeds" path="res://Models/logs.tscn" id="6_d4bw1"]
+[ext_resource type="PackedScene" uid="uid://nehllq7dkaui" path="res://Models/FireJamLogs.fbx" id="6_d4bw1"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
@@ -39,9 +39,6 @@ surface_material_override/0 = ExtResource("1_letfk")
 [node name="FireJamStars" parent="." unique_id=303163140 instance=ExtResource("5_lw2qh")]
 transform = Transform3D(2.165, 0, 0, 0, 2.165, 0, 0, 0, 2.165, -0.06582606, -13.284678, 0.7191353)
 
-[node name="FireJamLogs" parent="." unique_id=1095830420 instance=ExtResource("6_d4bw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95305103, 0, 0.12083435)
-
 [node name="FireJamBuilding" parent="." unique_id=1827778891 instance=ExtResource("4_mdw8m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92181647, 0, 0.27018356)
 
@@ -52,3 +49,6 @@ light_energy = 5.597
 spot_range = 99.136
 spot_attenuation = -1.94
 spot_angle = 74.09
+
+[node name="FireJamLogs" parent="." unique_id=169186498 instance=ExtResource("6_d4bw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9841032, 0, 1.6729534)
