@@ -1,5 +1,18 @@
 [gd_scene format=3 uid="uid://dah45d35yii40"]
 
-[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC0.tscn" id="1_8o5g4"]
+[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_8o5g4"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_ojgsq"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_8o5g4")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "Movement catches your eye. B is reaching 
+toward the fire, already encroaching on your 
+duties- but no, it is not a stick in her hand, 
+but a cigarette."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.365
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_ojgsq")

@@ -1,5 +1,5 @@
 [gd_scene format=3 uid="uid://bcvfk4wdvk8fp"]
 
-[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC0.tscn" id="1_l5adn"]
+[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_l5adn"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_l5adn")]

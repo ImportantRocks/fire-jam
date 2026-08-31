@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://xtudblvjjwr4"]
 
-[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC0.tscn" id="1_u5aqj"]
+[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_u5aqj"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_owdep"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_u5aqj")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "She caught you looking. Valeria lifts her 
+cigarette toward you: this is what it is good 
+for."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.844
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_owdep")

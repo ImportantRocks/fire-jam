@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://qcy8qe5eu7q0"]
 
-[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC0.tscn" id="1_uecmv"]
+[ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_uecmv"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_x0bap"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_uecmv")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "It’s obvious what she is going to say even 
+before the order comes. Her eyes have come 
+to rest on you, sticking you in place."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.735
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_x0bap")
