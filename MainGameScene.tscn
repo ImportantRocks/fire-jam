@@ -52,3 +52,4 @@ autoplay = true
 
 [node name="InteractableSphere" parent="." unique_id=1016576797 instance=ExtResource("8_ccfle")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.5414937, 3.1440175, 1.8115084)
+prompt_message = "Grab Log"

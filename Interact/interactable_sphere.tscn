@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://dd4ix3dqrov37"]
 
-[ext_resource type="Script" uid="uid://dj7mpqqvhoina" path="res://Interact/interactable.gd" id="1_ke2mq"]
+[ext_resource type="Script" uid="uid://belbntta4iqr8" path="res://Interact/interactable_sphere.gd" id="1_q6v3h"]
+[ext_resource type="AudioStream" uid="uid://cjnawmsktryk5" path="res://firewoosh.mp3" id="2_c3c14"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_yjec5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_q6v3h"]
 
 [node name="InteractableSphere" type="StaticBody3D" unique_id=1016576797]
-script = ExtResource("1_ke2mq")
+script = ExtResource("1_q6v3h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1650388263]
 visible = false
@@ -15,3 +16,9 @@ mesh = SubResource("SphereMesh_yjec5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752607217]
 shape = SubResource("SphereShape3D_q6v3h")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=758248628]
+stream = ExtResource("2_c3c14")
+volume_db = -10.0
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]
