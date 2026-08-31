@@ -81,6 +81,7 @@ func dialogMainFireSceneC1():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC1.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC1.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC1.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC1TimerStart)
@@ -92,6 +93,8 @@ func dialogMainFireSceneC1TimerStart(_string):
 	currentAnim.animation_finished.disconnect(dialogMainFireSceneC1TimerStart)
 	#connect next dialog to timer timeout signal
 	currentTimer.timeout.connect(dialogMainFireSceneC2)
+
+
 
 func dialogMainFireSceneC2():
 	#disconnect from previous timer signal
@@ -105,6 +108,7 @@ func dialogMainFireSceneC2():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC2.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC2.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC2.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC2TimerStart)

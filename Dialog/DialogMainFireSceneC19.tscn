@@ -1,5 +1,23 @@
 [gd_scene format=3 uid="uid://dfuhdry6dg1c7"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_sjx3f"]
+[ext_resource type="Texture2D" uid="uid://d21gbjg7jnkf0" path="res://Textures/GirlB.png" id="2_kkq8q"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_a5km8"]
+[ext_resource type="AudioStream" uid="uid://bpy1vwxp7uih3" path="res://FireJamDialogB.wav" id="4_kj0qr"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_sjx3f")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "Can’t be much of a soldier anymore."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 1.733
+
+[node name="GirlB" parent="." index="3" unique_id=567935416]
+texture = ExtResource("2_kkq8q")
+
+[node name="TextureRect" parent="GirlB" index="0" unique_id=242748580]
+texture = ExtResource("3_a5km8")
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_kj0qr")

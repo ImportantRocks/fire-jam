@@ -1,5 +1,24 @@
 [gd_scene format=3 uid="uid://dgwaceciaa3uk"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_d6r8i"]
+[ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://Textures/GirlT.png" id="2_q3sgp"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_p5kj0"]
+[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://FireJamDialogT.wav" id="4_p5kj0"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_d6r8i")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = ". . . Do you think the hypothermia will come 
+first?"
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 1.198
+
+[node name="GirlT" parent="." index="2" unique_id=1133951958]
+texture = ExtResource("2_q3sgp")
+
+[node name="TextureRect" parent="GirlT" index="0" unique_id=442938872]
+texture = ExtResource("3_p5kj0")
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_p5kj0")

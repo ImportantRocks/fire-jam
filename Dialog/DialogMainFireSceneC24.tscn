@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://bcvfk4wdvk8fp"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_l5adn"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_i2gt1"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_l5adn")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "You feel a strange sense of panic rising in 
+your chest, even when you can still hear 
+Valeria’s faint laughter."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.75
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_i2gt1")

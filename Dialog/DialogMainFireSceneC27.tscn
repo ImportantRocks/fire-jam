@@ -1,5 +1,25 @@
 [gd_scene format=3 uid="uid://d2pyjvr1u7ry8"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_5pdgc"]
+[ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://Textures/GirlT.png" id="2_i6ekw"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_pdr67"]
+[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://FireJamDialogT.wav" id="4_i26wk"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_5pdgc")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "You know, one of the first signs of 
+hypothermia is losing the ability to tell when 
+you’re too hot or too cold."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.45
+
+[node name="GirlT" parent="." index="2" unique_id=1133951958]
+texture = ExtResource("2_i6ekw")
+
+[node name="TextureRect" parent="GirlT" index="0" unique_id=442938872]
+texture = ExtResource("3_pdr67")
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_i26wk")

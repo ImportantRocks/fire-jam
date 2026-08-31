@@ -1,5 +1,18 @@
 [gd_scene format=3 uid="uid://dhb60jt6ba3jg"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_lnxpf"]
+[ext_resource type="AudioStream" uid="uid://dape0d2qbur2d" path="res://FireJamDialogNar.wav" id="2_m6adu"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_lnxpf")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "She gestures with her cigarette, painting an 
+abstract shape with its glowing end. In the 
+darkness, its path burns faintly on your 
+retinas."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 0.5
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("2_m6adu")

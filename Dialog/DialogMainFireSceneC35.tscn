@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://cd0qiq5wa548u"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_1rudn"]
+[ext_resource type="Texture2D" uid="uid://d21gbjg7jnkf0" path="res://Textures/GirlB.png" id="2_ilfwb"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_3lvws"]
+[ext_resource type="AudioStream" uid="uid://bpy1vwxp7uih3" path="res://FireJamDialogB.wav" id="4_8w5bi"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_1rudn")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "Rather take the cold than. . . "
+
+[node name="GirlB" parent="." index="3" unique_id=567935416]
+texture = ExtResource("2_ilfwb")
+
+[node name="TextureRect" parent="GirlB" index="0" unique_id=242748580]
+texture = ExtResource("3_3lvws")
+
+[node name="AudioStreamPlayer" parent="." index="5" unique_id=2079451254]
+stream = ExtResource("4_8w5bi")

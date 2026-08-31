@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://ca5thnbqihouq"]
 
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/DialogMainFireSceneC00.tscn" id="1_ot3a3"]
+[ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://Textures/GirlT.png" id="2_rhbvv"]
+[ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_ua3el"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_ot3a3")]
+
+[node name="RichTextLabel" parent="Panel/MarginContainer" parent_id_path=PackedInt32Array(644136543) index="0" unique_id=1764349102]
+text = "Speak for yourself. Some of us can actually 
+feel the cold."
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=905030831]
+speed_scale = 1.199
+
+[node name="GirlT" parent="." index="2" unique_id=1133951958]
+texture = ExtResource("2_rhbvv")
+
+[node name="TextureRect" parent="GirlT" index="0" unique_id=442938872]
+texture = ExtResource("3_ua3el")
