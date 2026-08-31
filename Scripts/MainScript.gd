@@ -1783,7 +1783,15 @@ func dialogGirlTWarmerC24TimerStart(_string):
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogGirlTWarmerC24TimerStart)
 	#connect next dialog to timer timeout signal
-	#currentTimer.timeout.connect(dialogGirlTWarmerC24)
+	currentTimer.timeout.connect(dialogGirlTWarmerC25)
 	
 	
 	
+func dialogGirlTWarmerC25():
+	#disconnect from previous timer signal
+	currentTimer.timeout.disconnect(dialogGirlTWarmerC25)
+	
+	#remove previous dialog child
+	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.dialogGirlTWarmerC24)
+
+	currentAudioPlayer.stop()

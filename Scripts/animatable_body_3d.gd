@@ -21,8 +21,10 @@ func _unhandled_input(event):
 		if event.keycode == KEY_ESCAPE:
 			print("esc")
 			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+				print("captured to vis")
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+			else: 
+				print("vis to cap")
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
