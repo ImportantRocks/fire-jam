@@ -133,6 +133,8 @@ func dialogMainFireSceneC3():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC3.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC3.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC3.get_node("AudioStreamPlayer")
+
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC3TimerStart)
@@ -157,6 +159,7 @@ func dialogMainFireSceneC4():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC4.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC4.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC4.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC4TimerStart)
@@ -181,6 +184,7 @@ func dialogMainFireSceneC5():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC5.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC5.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC5.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC5TimerStart)
@@ -205,6 +209,7 @@ func dialogMainFireSceneC6():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC6.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC6.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC6.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC6TimerStart)
@@ -229,6 +234,7 @@ func dialogMainFireSceneC7():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC7.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC7.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC7.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC7TimerStart)
@@ -253,6 +259,7 @@ func dialogMainFireSceneC8():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC8.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC8.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC8.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC8TimerStart)
@@ -277,6 +284,7 @@ func dialogMainFireSceneC9():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC9.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC9.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC9.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC9TimerStart)
@@ -301,6 +309,7 @@ func dialogMainFireSceneC10():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC10.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC10.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC10.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC10TimerStart)
@@ -326,6 +335,7 @@ func dialogMainFireSceneC11():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC11.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC11.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC11.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC11TimerStart)
@@ -350,6 +360,7 @@ func dialogMainFireSceneC12():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC12.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC12.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC12.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC12TimerStart)
@@ -374,6 +385,7 @@ func dialogMainFireSceneC13():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC13.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC13.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC13.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC13TimerStart)
@@ -398,6 +410,7 @@ func dialogMainFireSceneC14():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC14.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC14.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC14.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC14TimerStart)
@@ -422,6 +435,7 @@ func dialogMainFireSceneC15():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC15.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC15.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC15.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC15TimerStart)
@@ -446,6 +460,7 @@ func dialogMainFireSceneC16():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC16.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC16.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC16.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC16TimerStart)
@@ -470,6 +485,7 @@ func dialogMainFireSceneC17():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC17.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC17.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC17.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC17TimerStart)
@@ -494,6 +510,7 @@ func dialogMainFireSceneC18():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC18.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC18.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC18.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC18TimerStart)
@@ -518,6 +535,7 @@ func dialogMainFireSceneC19():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC19.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC19.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC19.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC19TimerStart)
@@ -542,6 +560,7 @@ func dialogMainFireSceneC20():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC20.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC20.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC20.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC20TimerStart)
@@ -566,6 +585,7 @@ func dialogMainFireSceneC21():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC21.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC21.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC21.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC21TimerStart)
@@ -590,6 +610,7 @@ func dialogMainFireSceneC22():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC22.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC22.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC22.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC22TimerStart)
@@ -614,6 +635,7 @@ func dialogMainFireSceneC23():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC23.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC23.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC23.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC23TimerStart)
@@ -638,6 +660,7 @@ func dialogMainFireSceneC24():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC24.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC24.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC24.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC24TimerStart)
@@ -662,6 +685,7 @@ func dialogMainFireSceneC25():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC25.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC25.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC25.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC25TimerStart)
@@ -686,6 +710,7 @@ func dialogMainFireSceneC26():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC26.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC26.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC26.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC26TimerStart)
@@ -710,6 +735,7 @@ func dialogMainFireSceneC27():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC27.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC27.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC27.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC27TimerStart)
@@ -734,6 +760,7 @@ func dialogMainFireSceneC28():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC28.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC28.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC28.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC28TimerStart)
@@ -758,6 +785,7 @@ func dialogMainFireSceneC29():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC29.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC29.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC29.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC29TimerStart)
@@ -782,6 +810,7 @@ func dialogMainFireSceneC30():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC30.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC30.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC30.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC30TimerStart)
@@ -806,6 +835,7 @@ func dialogMainFireSceneC31():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC31.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC31.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC31.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC31TimerStart)
@@ -830,6 +860,7 @@ func dialogMainFireSceneC32():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC32.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC32.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC32.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC32TimerStart)
@@ -854,6 +885,7 @@ func dialogMainFireSceneC33():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC33.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC33.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC33.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC33TimerStart)
@@ -878,6 +910,7 @@ func dialogMainFireSceneC34():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC34.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC34.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC34.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC34TimerStart)
@@ -902,6 +935,7 @@ func dialogMainFireSceneC35():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC35.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC35.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC35.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC35TimerStart)
@@ -926,6 +960,7 @@ func dialogMainFireSceneC36():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC36.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC36.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC36.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC36TimerStart)
@@ -950,6 +985,7 @@ func dialogMainFireSceneC37():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC37.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC37.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC37.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC37TimerStart)
@@ -974,6 +1010,7 @@ func dialogMainFireSceneC38():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC38.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC38.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC38.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC38TimerStart)
@@ -998,6 +1035,7 @@ func dialogMainFireSceneC39():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC39.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC39.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC39.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC39TimerStart)
@@ -1022,6 +1060,7 @@ func dialogMainFireSceneC40():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC40.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC40.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC40.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC40TimerStart)
@@ -1046,6 +1085,7 @@ func dialogMainFireSceneC41():
 	#set animation ref as currentAnim
 	currentAnim = DialogDb.dialogMainFireSceneC41.get_node("AnimationPlayer")
 	currentTimer = DialogDb.dialogMainFireSceneC41.get_node("Timer")
+	currentAudioPlayer = DialogDb.dialogMainFireSceneC41.get_node("AudioStreamPlayer")
 	
 	#connect end animation signal to start timer
 	currentAnim.animation_finished.connect(dialogMainFireSceneC41TimerStart)
