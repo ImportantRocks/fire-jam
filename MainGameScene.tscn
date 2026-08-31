@@ -58,3 +58,4 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.5414937, 3.1440175, 1.81150
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1441291834]
 transform = Transform3D(2.0543704, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43189907, 4.379346)
 mesh = SubResource("BoxMesh_ujtrj")
+prompt_message = "Grab Log"

@@ -1,5 +1,10 @@
 extends Node
 
+# Determines the strength of the fire. Value moves in increments of 4.
+# 0 = The fire is dead, 4 = Weak fire, 8 = Medium fire, 12 = Strong fire
+var firelevel = 8
+
+signal fireup()
 #intro section ---
 var dialogMainFireSceneC0 = preload("res://Dialog/DialogMainFireSceneC0.tscn").instantiate()
 var dialogMainFireSceneC1 = preload("res://Dialog/DialogMainFireSceneC1.tscn").instantiate()
