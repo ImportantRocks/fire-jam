@@ -79,3 +79,9 @@ var dialogGirlTWarmerC21 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC2
 var dialogGirlTWarmerC22 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC22.tscn").instantiate()
 var dialogGirlTWarmerC23 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC23.tscn").instantiate()
 var dialogGirlTWarmerC24 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC24.tscn").instantiate()
+
+var GirlTWarmer = [
+	dialogGirlTWarmerC0,
+	dialogGirlTWarmerC1,
+	dialogGirlTWarmerC2
+]

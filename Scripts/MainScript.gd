@@ -1,5 +1,6 @@
 extends Node
 
+var currentDialogPosition = 0
 var currentAnim
 var currentTimer
 var currentAudioPlayer
@@ -7,46 +8,60 @@ var currentAudioPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#dialogGirlTWarmerC0()
-	#playDialog("GirlTWarmerC1", "GirlTWarmerC0")
+	dialogTrackSwitcher("start")
+
+
+
+
+func dialogTrackSwitcher(track):
+	currentDialogPosition = 0
 	
-	dialogMainFireSceneC0()
+	match track:
+		"start":
+			playDialog(DialogDb.mainFireScene[currentDialogPosition])
 
 
 
 #messing with better dialog script
-func playDialog(dialogC, prevDialogC):
-	
-	#DialogDb.mainFireScene[1]
-	
-	#disconnect from previous timer signal
-	currentTimer.timeout.disconnect()
-	
-	#remove previous dialog child
-	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.previousDialogC)
-	#add new dialog child
-	get_tree().root.get_node("/root/Main/Dialog").add_child(DialogDb.currentDialogC)
-	
-	#set animation ref as currentAnim
-	currentAnim = DialogDb.currentDialogC.get_node("AnimationPlayer")
-	currentTimer = DialogDb.currentDialogC.get_node("Timer")
-	currentAudioPlayer = DialogDb.currentDialogC.get_node("AudioStreamPlayer")
-	
-	#connect end animation signal to start timer
-	currentAnim.animation_finished.connect(dialogGirlTWarmerC2TimerStart)
+func playDialog(dialog):
+
+	for d in dialog.size():
+		
+		if currentDialogPosition != 0:
+			#disconnect from previous timer signal
+			currentTimer.timeout.disconnect(dialog)
+			#remove previous dialog child
+			get_tree().root.get_node("/root/Main/Dialog").remove_child(dialog)
+			#add new dialog child
+			get_tree().root.get_node("/root/Main/Dialog").add_child(dialog)
+		else:
+			#add new dialog child
+			get_tree().root.get_node("/root/Main/Dialog").add_child(dialog[currentDialogPosition])
+		
+		#set animation ref as currentAnim
+		currentAnim = dialog[currentDialogPosition].get_node("AnimationPlayer")
+		currentTimer = dialog[currentDialogPosition].get_node("Timer")
+		currentAudioPlayer = dialog[currentDialogPosition].get_node("AudioStreamPlayer")
+		
+		#connect end animation signal to start timer
+		currentAnim.animation_finished.connect(startDialogEndTimer)
+		
+		#increment currentDialogPos
+		currentDialogPosition += 1
 
 
-func dialogTimerStart(_string):
+func startDialogEndTimer():
 	currentTimer.start()
 	currentAudioPlayer.stop()
+	
 	#disconnect signal from animation to timer
 	currentAnim.animation_finished.disconnect(dialogMainFireSceneC0TimerStart)
+	
 	#connect next dialog to timer timeout signal
 	currentTimer.timeout.connect(dialogMainFireSceneC1)
 
 
-func dialogTrackSwitcher():
-	pass
+
 
 
 #MainFireScene section ---
