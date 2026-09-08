@@ -15,13 +15,12 @@ func _ready() -> void:
 
 
 #messing with better dialog script
-func playDialog(dialogC:String, prevDialogC:String):
+func playDialog(dialogC, prevDialogC):
 	
-	var currentDialogC = "dialog" + dialogC
-	var previousDialogC = "dialog" + prevDialogC
+	#DialogDb.mainFireScene[1]
 	
 	#disconnect from previous timer signal
-	currentTimer.timeout.disconnect(currentDialogC)
+	currentTimer.timeout.disconnect()
 	
 	#remove previous dialog child
 	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.previousDialogC)
@@ -37,14 +36,20 @@ func playDialog(dialogC:String, prevDialogC:String):
 	currentAnim.animation_finished.connect(dialogGirlTWarmerC2TimerStart)
 
 
+func dialogTimerStart(_string):
+	currentTimer.start()
+	currentAudioPlayer.stop()
+	#disconnect signal from animation to timer
+	currentAnim.animation_finished.disconnect(dialogMainFireSceneC0TimerStart)
+	#connect next dialog to timer timeout signal
+	currentTimer.timeout.connect(dialogMainFireSceneC1)
 
 
-
+func dialogTrackSwitcher():
+	pass
 
 
 #MainFireScene section ---
-
-
 
 func dialogMainFireSceneC0():
 	#Starting the game with the first dialog
