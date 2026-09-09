@@ -44,11 +44,16 @@ var dialogMainFireSceneC39 = preload("res://Dialog/MainFireScene/DialogMainFireS
 var dialogMainFireSceneC40 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC40.tscn").instantiate()
 var dialogMainFireSceneC41 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC41.tscn").instantiate()
 
+#the first item of the array is the current scene's name
+#the last item of the array is the following scene (or scene branch's) name
+
 var mainFireScene = [
+	"mainFireScene",
 	dialogMainFireSceneC0,
 	dialogMainFireSceneC1,
 	dialogMainFireSceneC2,
-	dialogMainFireSceneC3
+	dialogMainFireSceneC3,
+	"ChangeFireTemp"
 ]
 
 
@@ -81,6 +86,7 @@ var dialogGirlTWarmerC23 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC2
 var dialogGirlTWarmerC24 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC24.tscn").instantiate()
 
 var GirlTWarmer = [
+	"GirlTWarmer",
 	dialogGirlTWarmerC0,
 	dialogGirlTWarmerC1,
 	dialogGirlTWarmerC2
