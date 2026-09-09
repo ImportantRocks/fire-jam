@@ -45,10 +45,12 @@ var dialogMainFireSceneC40 = preload("res://Dialog/MainFireScene/DialogMainFireS
 var dialogMainFireSceneC41 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC41.tscn").instantiate()
 
 var mainFireScene = [
+	"mainFireScene",
 	dialogMainFireSceneC0,
 	dialogMainFireSceneC1,
 	dialogMainFireSceneC2,
-	dialogMainFireSceneC3
+	dialogMainFireSceneC3,
+	"ChangeFireTemp"
 ]
 
 
@@ -81,6 +83,7 @@ var dialogGirlTWarmerC23 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC2
 var dialogGirlTWarmerC24 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC24.tscn").instantiate()
 
 var GirlTWarmer = [
+	"GirlTWarmer",
 	dialogGirlTWarmerC0,
 	dialogGirlTWarmerC1,
 	dialogGirlTWarmerC2
