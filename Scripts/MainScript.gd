@@ -1,5 +1,10 @@
 extends Node
 
+var currentDialogPosition = 0
+var currentDialogScene
+var prevDialogScene
+var nextDialogScene
+
 var currentAnim
 var currentTimer
 var currentAudioPlayer
@@ -7,34 +12,59 @@ var currentAudioPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#dialogGirlTWarmerC0()
-	#playDialog("GirlTWarmerC1", "GirlTWarmerC0")
-	
-	dialogMainFireSceneC0()
+	dialogTrackSwitcher("start")
 
 
 
-#messing with better dialog script
-func playDialog(dialogC:String, prevDialogC:String):
+
+func dialogTrackSwitcher(track):
+	match track:
+		"start":
+			playDialog(DialogDb.mainFireScene)
+
+
+
+
+func playDialog(dialog:Array):
 	
-	var currentDialogC = "dialog" + dialogC
-	var previousDialogC = "dialog" + prevDialogC
+	currentDialogScene= dialog[currentDialogPosition]
+	prevDialogScene = dialog[currentDialogPosition - 1]
 	
-	#disconnect from previous timer signal
-	currentTimer.timeout.disconnect(currentDialogC)
+	if currentDialogPosition == 0:
+		#add new dialog child
+		get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
+	else:
+		#remove previous dialog child
+		get_tree().root.get_node("/root/Main/Dialog").remove_child(prevDialogScene)
+		#add new dialog child
+		get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
 	
-	#remove previous dialog child
-	get_tree().root.get_node("/root/Main/Dialog").remove_child(DialogDb.previousDialogC)
-	#add new dialog child
-	get_tree().root.get_node("/root/Main/Dialog").add_child(DialogDb.currentDialogC)
 	
 	#set animation ref as currentAnim
-	currentAnim = DialogDb.currentDialogC.get_node("AnimationPlayer")
-	currentTimer = DialogDb.currentDialogC.get_node("Timer")
-	currentAudioPlayer = DialogDb.currentDialogC.get_node("AudioStreamPlayer")
+	currentAnim = currentDialogScene.get_node("AnimationPlayer")
+	currentTimer = currentDialogScene.get_node("Timer")
+	currentAudioPlayer = currentDialogScene.get_node("AudioStreamPlayer")
 	
-	#connect end animation signal to start timer
-	currentAnim.animation_finished.connect(dialogGirlTWarmerC2TimerStart)
+	#wait until current animation is finished
+	await currentAnim.animation_finished
+	
+	#stop the audio when the animation is finished
+	currentAudioPlayer.stop()
+	currentTimer.start()
+	
+	#wait again until the timer is finished
+	await currentTimer.timeout
+	
+	#increment currentDialogPos
+	currentDialogPosition += 1
+	
+	dialogTrackSwitcher("start")
+
+
+
+
+
+
 
 
 
@@ -43,8 +73,6 @@ func playDialog(dialogC:String, prevDialogC:String):
 
 
 #MainFireScene section ---
-
-
 
 func dialogMainFireSceneC0():
 	#Starting the game with the first dialog
