@@ -17,14 +17,19 @@ func _ready() -> void:
 	dialogTrackSwitcher(currentTrack)
 
 
+
 func dialogTrackSwitcher(track):
 	match track:
 		"mainFireScene":
 			playDialog(DialogDb.mainFireScene)
 			
-		"ChangeFireTemp" when Global.fire_level >= 4:
-			currentTrack = "GirlTWarmer"
+		"ChangeFireTemp":
 			playDialog(DialogDb.GirlTWarmer)
+			
+			
+		#"ChangeFireTemp" when Global.fire_level >= 4:
+			#currentTrack = "GirlTWarmer"
+			#playDialog(DialogDb.GirlTWarmer)
 		#"ChangeFireTemp" when Global.fire_level < 4:
 			#currentTrack = "GirlBWarmer"
 			#playDialog(DialogDb.GirlBWarmer)
@@ -45,36 +50,43 @@ func playDialog(dialog:Array):
 	if currentDialogPosition == 0:
 		#the first item in the array is the name of the current track
 		currentTrack = dialog[currentDialogPosition]
-	if currentDialogPosition == 1:
-		#add new dialog child
-		get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
 	else:
-		#remove previous dialog child
-		get_tree().root.get_node("/root/Main/Dialog").remove_child(prevDialogScene)
-		#add new dialog child
-		get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
+		if currentDialogPosition == 1:
+			#add new dialog child
+			get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
+		else:
+			#remove previous dialog child
+			get_tree().root.get_node("/root/Main/Dialog").remove_child(prevDialogScene)
+			#add new dialog child
+			get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
+		
+		#set animation ref as currentAnim
+		currentAnim = currentDialogScene.get_node("AnimationPlayer")
+		currentTimer = currentDialogScene.get_node("Timer")
+		currentAudioPlayer = currentDialogScene.get_node("AudioStreamPlayer")
+		
+		#wait until current animation is finished
+		await currentAnim.animation_finished
+		
+		#stop the audio when the animation is finished
+		currentAudioPlayer.stop()
+		currentTimer.start()
+		
+		#wait again until the timer is finished
+		await currentTimer.timeout
 	
 	
-	#set animation ref as currentAnim
-	currentAnim = currentDialogScene.get_node("AnimationPlayer")
-	currentTimer = currentDialogScene.get_node("Timer")
-	currentAudioPlayer = currentDialogScene.get_node("AudioStreamPlayer")
-	
-	#wait until current animation is finished
-	await currentAnim.animation_finished
-	
-	#stop the audio when the animation is finished
-	currentAudioPlayer.stop()
-	currentTimer.start()
-	
-	#wait again until the timer is finished
-	await currentTimer.timeout
-	
-	if dialog.size() == currentDialogPosition + 1:
+	if dialog.size() == currentDialogPosition + 2:
 		#end of dialog sequence
-		#the last item in each array is the name of the following track (or track branch)
 		currentDialogPosition += 1
+		
+		#remove previous dialog child (I had to make it currentDialogScene becuase it increments prior to this
+		#and becuase using prevDialogScene wasn't working for some reason(?)
+		get_tree().root.get_node("/root/Main/Dialog").remove_child(currentDialogScene)
+		
+		#the last item in each array is the name of the following track (or track branch)
 		currentTrack = dialog[currentDialogPosition]
+		
 		#set dialog pos to 0
 		currentDialogPosition = 0
 		
