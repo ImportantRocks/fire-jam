@@ -1,10 +1,10 @@
 extends Node
 
 #intro section ---
-var dialogMainFireSceneC0 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC0.tscn").instantiate()
-var dialogMainFireSceneC1 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC1.tscn").instantiate()
-var dialogMainFireSceneC2 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC2.tscn").instantiate()
-var dialogMainFireSceneC3 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC3.tscn").instantiate()
+var dialogMainFireSceneC0 = load("res://Dialog/MainFireScene/DialogMainFireSceneC0.tscn").instantiate()
+var dialogMainFireSceneC1 = load("res://Dialog/MainFireScene/DialogMainFireSceneC1.tscn").instantiate()
+var dialogMainFireSceneC2 = load("res://Dialog/MainFireScene/DialogMainFireSceneC2.tscn").instantiate()
+var dialogMainFireSceneC3 = load("res://Dialog/MainFireScene/DialogMainFireSceneC3.tscn").instantiate()
 var dialogMainFireSceneC4 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC4.tscn").instantiate()
 var dialogMainFireSceneC5 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC5.tscn").instantiate()
 var dialogMainFireSceneC6 = preload("res://Dialog/MainFireScene/DialogMainFireSceneC6.tscn").instantiate()
