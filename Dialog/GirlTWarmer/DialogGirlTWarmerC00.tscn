@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqnwtrg51lph5"]
 
 [ext_resource type="PackedScene" uid="uid://b87h45pqp3uyh" path="res://Dialog/DialogSceneTemplate.tscn" id="1_vwu11"]
-[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://FireJamDialogT.wav" id="4_qk56o"]
+[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://Sounds/FireJamDialogT.wav" id="4_qk56o"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_vwu11")]
 

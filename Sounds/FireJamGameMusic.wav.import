@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c2m3j2ocuh5xu"
-path="res://.godot/imported/FireJamGameMusic.wav-43351fbf4700ba4baf58d255c03b20db.sample"
+path="res://.godot/imported/FireJamGameMusic.wav-25bb52b36a246e387779e9f2bff03d88.sample"
 
 [deps]
 
-source_file="res://FireJamGameMusic.wav"
-dest_files=["res://.godot/imported/FireJamGameMusic.wav-43351fbf4700ba4baf58d255c03b20db.sample"]
+source_file="res://Sounds/FireJamGameMusic.wav"
+dest_files=["res://.godot/imported/FireJamGameMusic.wav-25bb52b36a246e387779e9f2bff03d88.sample"]
 
 [params]
 
