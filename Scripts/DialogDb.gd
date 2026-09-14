@@ -91,3 +91,6 @@ var GirlTWarmer = [
 	dialogGirlTWarmerC1,
 	dialogGirlTWarmerC2
 ]
+
+
+#var dialogGirlBCooler = load("res://Dialog/GirlTWarmer/DialogGirlBCoolerC0.tscn").instantiate()
