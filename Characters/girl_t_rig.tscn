@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cl1crq4cubik4"]
+
+[ext_resource type="PackedScene" uid="uid://t1v63nqxeyg4" path="res://Characters/GirlTRig.fbx" id="1_snwor"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_snwor"]
+animation = &"Armature|LegsOut"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3otfj"]
+animation = &"Armature|armsUp"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1b3ny"]
+animation = &"Armature|sitting"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_phbtf"]
+animation = &"Armature|sitting"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k4x4h"]
+xfade_time = 1.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6ljha"]
+xfade_time = 1.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dhp7p"]
+xfade_time = 1.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7p448"]
+xfade_time = 1.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_77sqa"]
+xfade_time = 1.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lbwr7"]
+xfade_time = 1.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1b3ny"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_snwor"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_snwor"]
+states/Armature|LegsOut/node = SubResource("AnimationNodeAnimation_snwor")
+states/Armature|LegsOut/position = Vector2(625, 87)
+states/Armature|armsUp/node = SubResource("AnimationNodeAnimation_3otfj")
+states/Armature|armsUp/position = Vector2(517, 204)
+states/Armature|sitting/node = SubResource("AnimationNodeAnimation_phbtf")
+states/Armature|sitting/position = Vector2(335, 87)
+"states/Armature|sitting 2/node" = SubResource("AnimationNodeAnimation_1b3ny")
+"states/Armature|sitting 2/position" = Vector2(856, 87)
+states/End/position = Vector2(1094, 104)
+states/Start/position = Vector2(156, 87)
+transitions = ["Armature|LegsOut", "Armature|sitting", SubResource("AnimationNodeStateMachineTransition_k4x4h"), "Armature|sitting", "Armature|armsUp", SubResource("AnimationNodeStateMachineTransition_6ljha"), "Armature|armsUp", "Armature|LegsOut", SubResource("AnimationNodeStateMachineTransition_dhp7p"), "Armature|LegsOut", "Armature|armsUp", SubResource("AnimationNodeStateMachineTransition_7p448"), "Armature|armsUp", "Armature|sitting", SubResource("AnimationNodeStateMachineTransition_77sqa"), "Armature|sitting", "Armature|LegsOut", SubResource("AnimationNodeStateMachineTransition_lbwr7"), "Start", "Armature|sitting", SubResource("AnimationNodeStateMachineTransition_1b3ny"), "Armature|LegsOut", "Armature|sitting 2", SubResource("AnimationNodeStateMachineTransition_snwor")]
+graph_offset = Vector2(-234, -70)
+
+[node name="GirlTRig" unique_id=453319124 instance=ExtResource("1_snwor")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1307132370) index="0" unique_id=1138519467]
+bones/1/rotation = Quaternion(0.12221952, 0, 0, 0.9925031)
+bones/3/rotation = Quaternion(-0.08287785, -0.02330047, -0.013582186, 0.9961947)
+bones/5/rotation = Quaternion(0.063813314, -0.08063454, -0.7290618, 0.6766794)
+bones/6/rotation = Quaternion(0.18138866, -0.029203687, -0.48172423, 0.8568472)
+bones/7/rotation = Quaternion(0.26011324, -0.08345149, -0.17670397, 0.9455965)
+bones/10/rotation = Quaternion(0.09800107, 0.13696072, 0.75207734, 0.6371948)
+bones/11/rotation = Quaternion(0.23832741, -0.032436807, 0.39336383, 0.8873628)
+bones/12/rotation = Quaternion(0.15698752, -0.114668734, 0.16876991, 0.9662934)
+bones/15/position = Vector3(-0.0028503453, 0.00038005982, 0.0046287095)
+bones/15/rotation = Quaternion(-0.015489148, 0.6129789, 0.789685, 0.020363236)
+bones/16/rotation = Quaternion(-0.654039, -0.01654604, 0.01951061, 0.75602823)
+bones/19/position = Vector3(0.002680388, 0.00038005982, 0.0046287095)
+bones/19/rotation = Quaternion(0.009195485, 0.61311203, 0.78984994, -0.01209618)
+bones/20/rotation = Quaternion(-0.6541806, 0.009826907, -0.0115929935, 0.7561857)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=295637956]
+tree_root = SubResource("AnimationNodeStateMachine_snwor")
+anim_player = NodePath("../AnimationPlayer")

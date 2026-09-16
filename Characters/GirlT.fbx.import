@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://csva3af6mespy"
-path="res://.godot/imported/GirlT.fbx-e2c95a96634de3ca01e248a381b30602.scn"
+path="res://.godot/imported/GirlT.fbx-fbb892ebcedc71bede65bba562b363d6.scn"
 
 [deps]
 
-source_file="res://Models/GirlT.fbx"
-dest_files=["res://.godot/imported/GirlT.fbx-e2c95a96634de3ca01e248a381b30602.scn"]
+source_file="res://Characters/GirlT.fbx"
+dest_files=["res://.godot/imported/GirlT.fbx-fbb892ebcedc71bede65bba562b363d6.scn"]
 
 [params]
 

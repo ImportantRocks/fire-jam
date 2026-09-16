@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://dkhr0bjpu5jdq"]
 
 [ext_resource type="Material" uid="uid://c4k8yw5s4nyah" path="res://Materials/BaseMaterial.tres" id="1_letfk"]
-[ext_resource type="PackedScene" uid="uid://coidrm5rkn5al" path="res://Models/girl_b_sit.tscn" id="3_0dmlb"]
-[ext_resource type="PackedScene" uid="uid://dlm4mk7xruwoe" path="res://Models/girl_t_sit.tscn" id="3_mdw8m"]
+[ext_resource type="PackedScene" uid="uid://coidrm5rkn5al" path="res://Characters/girl_b_sit.tscn" id="3_0dmlb"]
+[ext_resource type="PackedScene" uid="uid://dlm4mk7xruwoe" path="res://Characters/girl_t_sit.tscn" id="3_mdw8m"]
 [ext_resource type="PackedScene" uid="uid://bkf22vr8gu51t" path="res://Models/fire_jam_building.tscn" id="4_mdw8m"]
 [ext_resource type="PackedScene" uid="uid://dpvxmyips2trf" path="res://Models/fire_jam_stars.tscn" id="5_lw2qh"]
 [ext_resource type="PackedScene" uid="uid://nehllq7dkaui" path="res://Models/FireJamLogs.fbx" id="6_d4bw1"]
+[ext_resource type="PackedScene" uid="uid://cl1crq4cubik4" path="res://Characters/girl_t_rig.tscn" id="7_8ckao"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujtrj"]
 
@@ -28,7 +29,7 @@ surface_material_override/0 = ExtResource("1_letfk")
 environment = SubResource("Environment_ujtrj")
 
 [node name="GirlARig" parent="." unique_id=1535236600 instance=ExtResource("3_mdw8m")]
-transform = Transform3D(0.41575927, -0.040628545, 0.9085667, 0.019003727, 0.9991717, 0.035984047, -0.90927607, 0.0023054488, 0.41618696, -3.0538237, -0.871241, -2.101564)
+transform = Transform3D(0.41575927, -0.040628545, 0.9085667, 0.019003727, 0.9991717, 0.035984047, -0.90927607, 0.0023054488, 0.41618696, -10.508062, -0.871241, -5.464096)
 
 [node name="GirlBSit" parent="." unique_id=1914595786 instance=ExtResource("3_0dmlb")]
 transform = Transform3D(0.5283933, 0, -0.8489996, 0, 1, 0, 0.8489996, 0, 0.5283933, 2.7720258, -1.1920929e-07, -1.5042965)
@@ -59,3 +60,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9841032, 0, 1.6729534)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=532384681]
 transform = Transform3D(0.8904809, 0, -0.45502067, 0, 1.0935853, 0, 0.45502067, 0, 0.8904809, -3.0817719, 0.44281685, -2.2130764)
 mesh = SubResource("BoxMesh_ujtrj")
+
+[node name="GirlTRig" parent="." unique_id=453319124 instance=ExtResource("7_8ckao")]
+transform = Transform3D(0.5347319, 0, 0.8450218, 0, 1, 0, -0.8450218, 0, 0.5347319, -3.0528047, -0.8445313, -2.264482)
