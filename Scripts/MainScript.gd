@@ -10,12 +10,24 @@ var currentAnim
 var currentTimer
 var currentAudioPlayer
 
+@onready var backgroundMusicPlayer = $BackgroundMusicPlayer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	currentTrack = "mainFireScene"
 	dialogTrackSwitcher(currentTrack)
+	backgroundMusicPlayer.volume_linear = Global.masterVolume
 
+
+func updateMasterVolume():
+	backgroundMusicPlayer.volume_linear = Global.masterVolume
+	
+func updateMusicVolume():
+	backgroundMusicPlayer.volume_linear = Global.musicVolumeMix
+	
+func updateSFXVolume():
+	backgroundMusicPlayer.volume_linear = Global.SFXVolumeMix
 
 
 func dialogTrackSwitcher(track):

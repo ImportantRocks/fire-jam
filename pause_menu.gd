@@ -1,17 +1,35 @@
 extends Control
 
-@onready var volumeValueLabel = $BackgroundPanel/VBoxContainer/MarginContainer3/VolumeValueLabel
-@onready var volumeSlider = $BackgroundPanel/VBoxContainer/MarginContainer2/VolumeSlider
+@onready var masterVolumeValueLabel = $BackgroundPanel/VBoxContainer/MarginContainer3/MasterVolumeValueLabel
+@onready var masterVolumeSlider = $BackgroundPanel/VBoxContainer/MarginContainer2/MasterVolumeSlider
 
-# Called when the node enters the scene tree for the first time.
+@onready var musicVolumeValueLabel = $BackgroundPanel/VBoxContainer/MarginContainer6/MusicVolumeValueLabel
+@onready var musicVolumeSlider = $BackgroundPanel/VBoxContainer/MarginContainer4/MusicVolumeSlider
+
+@onready var SFXVolumeValueLabel = $BackgroundPanel/VBoxContainer/MarginContainer7/SFXVolumeValueLabel
+@onready var SFXVolumeSlider = $BackgroundPanel/VBoxContainer/MarginContainer5/SFXVolumeSlider
+
+var masterVolumeLabelInt
+var musicVolumeLabelInt
+var SFXVolumeLabelInt
+
+var main
+
+
 func _ready() -> void:
-	Global.volume = int(volumeSlider.value)
-	volumeValueLabel.text = str(Global.volume)
+	main = get_tree().root.get_node("/root/Main")
+	
+	#setting the value labels for each volume slider
+	
+	masterVolumeLabelInt = int(Global.masterVolume*100)
+	masterVolumeValueLabel.text = str(masterVolumeLabelInt)
+	
+	musicVolumeLabelInt = int(Global.musicVolume*100)
+	musicVolumeValueLabel.text = str(musicVolumeLabelInt)
+	
+	SFXVolumeLabelInt = int(Global.SFXVolume*100)
+	SFXVolumeValueLabel.text = str(SFXVolumeLabelInt)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_quit_button_pressed() -> void:
@@ -19,8 +37,23 @@ func _on_quit_button_pressed() -> void:
 
 
 
+func _on_master_volume_slider_value_changed(value: float) -> void:
+	Global.masterVolume = value/100
+	masterVolumeLabelInt = int(Global.masterVolume*100)
+	masterVolumeValueLabel.text = str(masterVolumeLabelInt)
+	main.updateMasterVolume()
 
-func _on_volume_slider_value_changed(value: float) -> void:
-	print("str(v")
-	Global.volume = int(volumeSlider.value)
-	volumeValueLabel.text = str(Global.volume)
+
+
+func _on_music_volume_slider_value_changed(value: float) -> void:
+	Global.musicVolume = value/100
+	musicVolumeLabelInt = int(Global.musicVolume*100)
+	musicVolumeValueLabel.text = str(musicVolumeLabelInt)
+	main.updateMusicVolume()
+
+
+func _on_sfx_volume_slider_value_changed(value: float) -> void:
+	Global.SFXVolume = value/100
+	SFXVolumeLabelInt = int(Global.SFXVolume*100)
+	SFXVolumeValueLabel.text = str(SFXVolumeLabelInt)
+	main.updateSFXVolume()

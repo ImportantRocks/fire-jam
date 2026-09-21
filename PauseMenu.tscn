@@ -39,10 +39,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 617.0
-offset_top = 89.0
-offset_right = -560.0
-offset_bottom = -635.0
+offset_left = 1151.0
+offset_top = 58.0
+offset_right = -26.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -53,10 +53,10 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="Label" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer" unique_id=1954409816]
+[node name="MasterVolumeLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer" unique_id=1954409816]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "VOLUME"
+text = "MASTER VOLUME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -66,7 +66,7 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 
-[node name="VolumeSlider" type="HSlider" parent="BackgroundPanel/VBoxContainer/MarginContainer2" unique_id=352659584]
+[node name="MasterVolumeSlider" type="HSlider" parent="BackgroundPanel/VBoxContainer/MarginContainer2" unique_id=352659584]
 layout_mode = 2
 size_flags_vertical = 4
 value = 80.0
@@ -77,7 +77,83 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="VolumeValueLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer3" unique_id=1381879011]
+[node name="MasterVolumeValueLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer3" unique_id=1381879011]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer8" type="MarginContainer" parent="BackgroundPanel/VBoxContainer" unique_id=113551187]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="MusicVolumeLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer8" unique_id=1535898979]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "MUSIC VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="BackgroundPanel/VBoxContainer" unique_id=1462008280]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="MusicVolumeSlider" type="HSlider" parent="BackgroundPanel/VBoxContainer/MarginContainer4" unique_id=588413821]
+layout_mode = 2
+size_flags_vertical = 4
+value = 80.0
+
+[node name="MarginContainer6" type="MarginContainer" parent="BackgroundPanel/VBoxContainer" unique_id=391596485]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="MusicVolumeValueLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer6" unique_id=1200161034]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer9" type="MarginContainer" parent="BackgroundPanel/VBoxContainer" unique_id=147881294]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="SFXLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer9" unique_id=1113695179]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "SFX VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="BackgroundPanel/VBoxContainer" unique_id=2100803028]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="SFXVolumeSlider" type="HSlider" parent="BackgroundPanel/VBoxContainer/MarginContainer5" unique_id=1918120467]
+layout_mode = 2
+size_flags_vertical = 4
+value = 80.0
+
+[node name="MarginContainer7" type="MarginContainer" parent="BackgroundPanel/VBoxContainer" unique_id=1597166342]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="SFXVolumeValueLabel" type="Label" parent="BackgroundPanel/VBoxContainer/MarginContainer7" unique_id=662332592]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -85,4 +161,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="BackgroundPanel/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="value_changed" from="BackgroundPanel/VBoxContainer/MarginContainer2/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanel/VBoxContainer/MarginContainer2/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanel/VBoxContainer/MarginContainer4/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanel/VBoxContainer/MarginContainer5/SFXVolumeSlider" to="." method="_on_sfx_volume_slider_value_changed"]
