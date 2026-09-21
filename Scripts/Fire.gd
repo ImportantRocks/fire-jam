@@ -23,6 +23,7 @@ func _on_timer_timeout():
 func _on_fire_increase():
 	Global.fire_level += 1
 	$AudioStreamPlayer3D.play()
+	$LogSparks.emitting = true
 	_fireUpdate(Global.fire_level)
 
 

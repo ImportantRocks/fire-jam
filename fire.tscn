@@ -7,6 +7,39 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ufe0f"]
 radius = 0.25
 
+[sub_resource type="Curve" id="Curve_x6ecg"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 4), 185.64383, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_eby7a"]
+curve = SubResource("Curve_x6ecg")
+
+[sub_resource type="Curve" id="Curve_7gy0e"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.187267, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tkjbc"]
+curve = SubResource("Curve_7gy0e")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_168ql"]
+emission_shape_scale = Vector3(0.5, 0.5, 0.5)
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(1, 1, 0)
+spread = 180.0
+initial_velocity_min = 3.0
+initial_velocity_max = 4.0
+gravity = Vector3(0, 0.3, 0)
+linear_accel_min = -1.0000023
+linear_accel_max = -0.5000022
+linear_accel_curve = SubResource("CurveTexture_eby7a")
+scale_min = 0.049999997
+scale_max = 0.099999994
+scale_curve = SubResource("CurveTexture_tkjbc")
+
+[sub_resource type="SphereMesh" id="SphereMesh_8bgeh"]
+
 [node name="Fire" type="Node3D" unique_id=1031200149]
 script = ExtResource("1_2pqqt")
 
@@ -31,5 +64,16 @@ autostart = true
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1456813304]
 stream = ExtResource("3_x6ecg")
 volume_db = -15.0
+
+[node name="LogSparks" type="GPUParticles3D" parent="." unique_id=1886754038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20475459, 0)
+emitting = false
+amount = 16
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.9
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_168ql")
+draw_pass_1 = SubResource("SphereMesh_8bgeh")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
