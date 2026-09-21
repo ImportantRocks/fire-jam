@@ -11,14 +11,13 @@ signal interacted(body)
 func interact(body):
 	print(body.name, " interacted with ", name)
 	
-	if Global.logs_remaining >= 1:
+	if Global.logs_remaining >= 1 and Global.fire_level >= 1 and $/root/Main/Fire/LogCooldown.is_stopped():
 		interacted.emit(body)
 		Global.log_added.emit()
 		Global.logs_remaining -= 1
 		print(" Logs remaining = ", Global.logs_remaining)
+		if Global.logs_remaining == 0:
+			Global.logs_depleted.emit()
 			
 	else:
-		Global.logs_remaining = 0
-		print(" ...but there was nothing left to burn ")
-			
-	
+		print(" ...but it failed")
