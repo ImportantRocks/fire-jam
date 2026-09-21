@@ -1,5 +1,6 @@
 extends Node
 
+var volume
 
 # Fire scripting is handled in fire.gd
 var fire_level = 2
