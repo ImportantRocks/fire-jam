@@ -22,9 +22,11 @@ func _on_timer_timeout():
 # Increments fire_level by 1
 func _on_fire_increase():
 	Global.fire_level += 1
-	$AudioStreamPlayer3D.play()
-	$LogSparks.emitting = true
 	_fireUpdate(Global.fire_level)
+	$FireTimer.start()
+	$LogCooldown.start()
+	$FireWoosh.play(1.1)
+	$LogSparks.emitting = true
 
 
 # Called whenever fire_level is increased or decreased
@@ -32,7 +34,8 @@ func _fireUpdate(param1):
 	# Dead fire
 	if param1 <= 0:
 		firelight.light_energy = 0
-		firelight.omni_range = 10
+		firelight.omni_range = 0
+		Global.fire_died.emit()
 		# Limiter to keep fire_level >= 0
 		Global.fire_level = 0
 		

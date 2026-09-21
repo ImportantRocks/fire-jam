@@ -57,11 +57,11 @@ light_color = Color(0.5517572, 0.4379951, 1, 1)
 light_energy = 6.0
 omni_range = 10.0
 
-[node name="Timer" type="Timer" parent="." unique_id=974977932]
+[node name="FireTimer" type="Timer" parent="." unique_id=974977932]
 wait_time = 60.0
 autostart = true
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1456813304]
+[node name="FireWoosh" type="AudioStreamPlayer3D" parent="." unique_id=1456813304]
 stream = ExtResource("3_x6ecg")
 volume_db = -15.0
 
@@ -69,11 +69,15 @@ volume_db = -15.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20475459, 0)
 emitting = false
 amount = 16
-lifetime = 2.0
+lifetime = 0.9
 one_shot = true
 explosiveness = 0.9
 fixed_fps = 0
 process_material = SubResource("ParticleProcessMaterial_168ql")
 draw_pass_1 = SubResource("SphereMesh_8bgeh")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="LogCooldown" type="Timer" parent="." unique_id=1639270479]
+wait_time = 2.5
+one_shot = true
+
+[connection signal="timeout" from="FireTimer" to="." method="_on_timer_timeout"]
