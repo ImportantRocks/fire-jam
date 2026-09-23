@@ -1,12 +1,8 @@
 extends Node
 
 var masterVolume = .8
-
 var musicVolume = .8
 var SFXVolume = .8
-
-var musicVolumeMix = musicVolume * masterVolume
-var SFXVolumeMix = SFXVolume * masterVolume
 
 # Fire scripting is handled in fire.gd
 var fire_level = 2

@@ -52,6 +52,7 @@ current = true
 [node name="InteractRay" parent="Player/Head" unique_id=1896232478 instance=ExtResource("5_ccfle")]
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1414581414]
+process_mode = 3
 stream = ExtResource("4_t7cbl")
 autoplay = true
 

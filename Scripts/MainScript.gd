@@ -10,25 +10,45 @@ var currentAnim
 var currentTimer
 var currentAudioPlayer
 
+var musicVolumeMix
+var SFXVolumeMix
+
 @onready var backgroundMusicPlayer = $BackgroundMusicPlayer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#Start dialog
 	currentTrack = "mainFireScene"
 	dialogTrackSwitcher(currentTrack)
-	backgroundMusicPlayer.volume_linear = Global.masterVolume
+	
+	#set volume
+	updateMasterVolume()
+	updateMusicVolume()
+	updateSFXVolume()
 
+
+
+#Volume functions
 
 func updateMasterVolume():
-	backgroundMusicPlayer.volume_linear = Global.masterVolume
+	print("Master vol = " + str(Global.masterVolume))
+	updateMusicVolume()
+	updateSFXVolume()
 	
 func updateMusicVolume():
-	backgroundMusicPlayer.volume_linear = Global.musicVolumeMix
+	musicVolumeMix = Global.musicVolume * Global.masterVolume
+	print("Music vol mix = " + str(musicVolumeMix))
+	backgroundMusicPlayer.volume_linear = musicVolumeMix
 	
 func updateSFXVolume():
-	backgroundMusicPlayer.volume_linear = Global.SFXVolumeMix
+	SFXVolumeMix = Global.SFXVolume * Global.masterVolume
+	print("SFX vol mix = " + str(SFXVolumeMix))
+	currentAudioPlayer.volume_linear = SFXVolumeMix
 
+
+
+#Dialog functions
 
 func dialogTrackSwitcher(track):
 	match track:
@@ -72,10 +92,12 @@ func playDialog(dialog:Array):
 			#add new dialog child
 			get_tree().root.get_node("/root/Main/Dialog").add_child(currentDialogScene)
 		
-		#set animation ref as currentAnim
+		#set current dialog scene references
 		currentAnim = currentDialogScene.get_node("AnimationPlayer")
 		currentTimer = currentDialogScene.get_node("Timer")
 		currentAudioPlayer = currentDialogScene.get_node("AudioStreamPlayer")
+		updateSFXVolume()
+		
 		
 		#wait until current animation is finished
 		await currentAnim.animation_finished
