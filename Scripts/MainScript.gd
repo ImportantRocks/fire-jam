@@ -35,12 +35,13 @@ func updateMasterVolume():
 	print("Master vol = " + str(Global.masterVolume))
 	updateMusicVolume()
 	updateSFXVolume()
-	
+
 func updateMusicVolume():
 	musicVolumeMix = Global.musicVolume * Global.masterVolume
 	print("Music vol mix = " + str(musicVolumeMix))
 	backgroundMusicPlayer.volume_linear = musicVolumeMix
-	
+
+#NEED TO make sure ALL SFX are included in this - firewoosh 
 func updateSFXVolume():
 	SFXVolumeMix = Global.SFXVolume * Global.masterVolume
 	print("SFX vol mix = " + str(SFXVolumeMix))
@@ -55,21 +56,21 @@ func dialogTrackSwitcher(track):
 		"mainFireScene":
 			playDialog(DialogDb.mainFireScene)
 			
-		"ChangeFireTemp":
-			playDialog(DialogDb.GirlTWarmer)
+		"changeFireTemp":
+			playDialog(DialogDb.girlTWarmer)
 			
 			
 		#"ChangeFireTemp" when Global.fire_level >= 4:
-			#currentTrack = "GirlTWarmer"
-			#playDialog(DialogDb.GirlTWarmer)
+			#currentTrack = "girlTWarmer"
+			#playDialog(DialogDb.girlTWarmer)
 		#"ChangeFireTemp" when Global.fire_level < 4:
-			#currentTrack = "GirlBWarmer"
-			#playDialog(DialogDb.GirlBWarmer)
+			#currentTrack = "girlBCooler"
+			#playDialog(DialogDb.girlBCooler)
 			
-		"GirlTWarmer":
-			playDialog(DialogDb.GirlTWarmer)
-		#"GirlBWarmer":
-			#playDialog(DialogDb.GirlBWarmer)
+		"girlTWarmer":
+			playDialog(DialogDb.girlTWarmer)
+		#"girlBWarmer":
+			#playDialog(DialogDb.girlBCooler)
 
 
 
