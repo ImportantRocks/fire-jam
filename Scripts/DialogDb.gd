@@ -53,7 +53,7 @@ var mainFireScene = [
 	dialogMainFireSceneC1,
 	dialogMainFireSceneC2,
 	dialogMainFireSceneC3,
-	"ChangeFireTemp"
+	"changeFireTemp"
 ]
 
 
@@ -85,8 +85,8 @@ var dialogGirlTWarmerC22 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC2
 var dialogGirlTWarmerC23 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC23.tscn").instantiate()
 var dialogGirlTWarmerC24 = preload("res://Dialog/GirlTWarmer/DialogGirlTWarmerC24.tscn").instantiate()
 
-var GirlTWarmer = [
-	"GirlTWarmer",
+var girlTWarmer = [
+	"girlTWarmer",
 	dialogGirlTWarmerC0,
 	dialogGirlTWarmerC1,
 	dialogGirlTWarmerC2
