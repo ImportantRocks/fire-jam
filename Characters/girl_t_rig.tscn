@@ -1,106 +1,172 @@
 [gd_scene format=3 uid="uid://cl1crq4cubik4"]
 
 [ext_resource type="PackedScene" uid="uid://t1v63nqxeyg4" path="res://Characters/GirlTRig.fbx" id="1_snwor"]
+[ext_resource type="Script" uid="uid://bl6ujm4ogva2t" path="res://Characters/girlTScript.gd" id="2_3otfj"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_snwor"]
-animation = &"Armature|LegsOut"
+[sub_resource type="Animation" id="Animation_3otfj"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CigLight:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.3000001, 1.4333333, 2.0333335, 2.1333334, 2.5, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 0.0, 0.0, 1.5, 1.5, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_phbtf"]
+_data = {
+&"CigLightAnim": SubResource("Animation_3otfj")
+}
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3otfj"]
-animation = &"Armature|armsUp"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1b3ny"]
-animation = &"Armature|leaningIn"
+animation = &"Armature|LeaningInTurn"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_phbtf"]
-animation = &"Armature|sitting"
+animation = &"Armature|Smoking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1b3ny"]
+animation = &"Armature|armsUp"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_snwor"]
+animation = &"Armature|leaningIn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3otfj"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_phbtf"]
+xfade_time = 1.0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1b3ny"]
+xfade_time = 1.0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k4x4h"]
 xfade_time = 1.0
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6ljha"]
 xfade_time = 1.0
-advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dhp7p"]
+xfade_time = 1.0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7p448"]
+xfade_time = 1.0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_77sqa"]
 xfade_time = 1.0
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lbwr7"]
 xfade_time = 1.0
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1b3ny"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dhp7p"]
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_snwor"]
-states/Armature|LegsOut/node = SubResource("AnimationNodeAnimation_snwor")
-states/Armature|LegsOut/position = Vector2(625, 87)
-states/Armature|armsUp/node = SubResource("AnimationNodeAnimation_3otfj")
-states/Armature|armsUp/position = Vector2(517, 204)
-states/Armature|leaningIn/node = SubResource("AnimationNodeAnimation_1b3ny")
-states/Armature|leaningIn/position = Vector2(862, 93)
-states/Armature|sitting/node = SubResource("AnimationNodeAnimation_phbtf")
-states/Armature|sitting/position = Vector2(335, 87)
+states/Armature|LeaningInTurn/node = SubResource("AnimationNodeAnimation_3otfj")
+states/Armature|LeaningInTurn/position = Vector2(710, 94)
+states/Armature|Smoking/node = SubResource("AnimationNodeAnimation_phbtf")
+states/Armature|Smoking/position = Vector2(275, 302)
+states/Armature|armsUp/node = SubResource("AnimationNodeAnimation_1b3ny")
+states/Armature|armsUp/position = Vector2(562, 183)
+states/Armature|leaningIn/node = SubResource("AnimationNodeAnimation_snwor")
+states/Armature|leaningIn/position = Vector2(409, 94)
 states/End/position = Vector2(1094, 104)
-states/Start/position = Vector2(156, 87)
-transitions = ["Armature|LegsOut", "Armature|sitting", SubResource("AnimationNodeStateMachineTransition_k4x4h"), "Armature|sitting", "Armature|armsUp", SubResource("AnimationNodeStateMachineTransition_6ljha"), "Armature|armsUp", "Armature|sitting", SubResource("AnimationNodeStateMachineTransition_77sqa"), "Armature|sitting", "Armature|LegsOut", SubResource("AnimationNodeStateMachineTransition_lbwr7"), "Start", "Armature|sitting", SubResource("AnimationNodeStateMachineTransition_1b3ny"), "Armature|LegsOut", "Armature|leaningIn", SubResource("AnimationNodeStateMachineTransition_dhp7p")]
-graph_offset = Vector2(-234, -70)
+states/Start/position = Vector2(131, 94)
+transitions = ["Start", "Armature|leaningIn", SubResource("AnimationNodeStateMachineTransition_3otfj"), "Armature|leaningIn", "Armature|Smoking", SubResource("AnimationNodeStateMachineTransition_phbtf"), "Armature|Smoking", "Armature|leaningIn", SubResource("AnimationNodeStateMachineTransition_1b3ny"), "Armature|leaningIn", "Armature|LeaningInTurn", SubResource("AnimationNodeStateMachineTransition_k4x4h"), "Armature|LeaningInTurn", "Armature|leaningIn", SubResource("AnimationNodeStateMachineTransition_6ljha"), "Armature|LeaningInTurn", "Armature|armsUp", SubResource("AnimationNodeStateMachineTransition_dhp7p"), "Armature|armsUp", "Armature|LeaningInTurn", SubResource("AnimationNodeStateMachineTransition_7p448"), "Armature|armsUp", "Armature|leaningIn", SubResource("AnimationNodeStateMachineTransition_77sqa"), "Armature|leaningIn", "Armature|armsUp", SubResource("AnimationNodeStateMachineTransition_lbwr7")]
+graph_offset = Vector2(-217, -7)
+
+[sub_resource type="Animation" id="Animation_phbtf"]
+resource_name = "NewCigLightAnim"
+length = 3.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CigLight:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.3000001, 1.4333333, 2.0333335, 2.1333334, 3.0666666, 3.1666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 0.0, 0.0, 1.5, 1.5, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1b3ny"]
+_data = {
+&"NewCigLightAnim": SubResource("Animation_phbtf")
+}
 
 [node name="GirlTRig" unique_id=453319124 instance=ExtResource("1_snwor")]
+script = ExtResource("2_3otfj")
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1465746054) index="0" unique_id=98544257]
-bones/0/rotation = Quaternion(0.8821647, -2.7330046e-17, 1.6890591e-17, 0.47094113)
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1990623693) index="0" unique_id=2060250176]
+bones/0/rotation = Quaternion(0.7589178, -0.014806932, -0.004471328, 0.65100276)
 bones/1/position = Vector3(0, 0.006513965, -4.3368087e-19)
-bones/1/rotation = Quaternion(0.123842865, 4.438992e-20, 3.604927e-19, 0.99230194)
+bones/1/rotation = Quaternion(-0.006022952, -0.0082812775, -0.0033052163, 0.9999421)
 bones/2/position = Vector3(0, 0.0071771303, -4.3368087e-19)
-bones/2/rotation = Quaternion(-0.1244332, -6.7031483e-18, -2.6804278e-17, 0.9922281)
+bones/2/rotation = Quaternion(0.09383188, -0.038373817, -0.041619644, 0.9939773)
 bones/3/position = Vector3(0, 0.0030759093, -4.3368087e-19)
+bones/3/rotation = Quaternion(0.054090396, 0.031655267, 0.011302598, 0.99797016)
 bones/5/position = Vector3(0, 0.0071771303, -4.3368087e-19)
-bones/5/rotation = Quaternion(0.10244733, -0.12542884, -0.7560602, 0.6341492)
+bones/5/rotation = Quaternion(0.13123092, 0.024494248, -0.76345074, 0.6319189)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/position = Vector3(1.1098477e-09, 0.0050385557, -4.98733e-17)
-bones/6/rotation = Quaternion(0.38314044, -0.17124215, -0.35645714, 0.8347562)
+bones/6/rotation = Quaternion(0.4895952, -0.1471839, 0.12983936, 0.8495736)
 bones/6/scale = Vector3(0.99999976, 0.99999976, 1)
 bones/7/position = Vector3(8.7376695e-10, 0.00546577, -5.2041704e-18)
-bones/7/rotation = Quaternion(0.3061908, -0.2647775, -0.18858674, 0.8947486)
+bones/7/rotation = Quaternion(0.5667387, -0.29221043, -0.2082249, 0.7416622)
 bones/7/scale = Vector3(1.0000001, 0.99999994, 1)
 bones/8/position = Vector3(1.61769e-09, 0.005631341, -2.0068329e-10)
-bones/8/rotation = Quaternion(0.09143383, 0.0008266332, 0.011347317, 0.99574614)
+bones/8/rotation = Quaternion(0.09296834, -0.31682658, -0.13272893, 0.9345379)
 bones/8/scale = Vector3(0.99999994, 1.0000001, 1)
 bones/10/position = Vector3(-0.00025000097, 0.0071771303, -1.5258789e-09)
-bones/10/rotation = Quaternion(0.13258573, 0.17351893, 0.77280074, 0.5958954)
+bones/10/rotation = Quaternion(0.0966589, -0.015900921, 0.83943164, 0.53456414)
 bones/10/scale = Vector3(1, 1, 1)
 bones/11/position = Vector3(-4.2160884e-09, 0.0050385557, -4.2914555e-10)
-bones/11/rotation = Quaternion(0.45744005, 0.029418537, 0.30780503, 0.8337502)
+bones/11/rotation = Quaternion(0.5417479, 0.056006055, -0.30600643, 0.78085375)
 bones/11/scale = Vector3(0.99999976, 0.99999976, 1)
 bones/12/position = Vector3(2.1424102e-09, 0.0054657706, 1.6689743e-10)
-bones/12/rotation = Quaternion(0.37970763, 0.30822164, 0.15008266, 0.859242)
+bones/12/rotation = Quaternion(0.4987856, 0.40938345, 0.068068504, 0.7609106)
 bones/12/scale = Vector3(1.0000001, 1.0000001, 1)
 bones/13/position = Vector3(-1.6066943e-09, 0.00563134, 8.593931e-11)
-bones/13/rotation = Quaternion(0.091433786, -0.00082638394, -0.011347048, 0.99574614)
+bones/13/rotation = Quaternion(0.092189156, -0.0658265, 0.19038475, 0.97515213)
 bones/13/scale = Vector3(0.9999998, 0.9999998, 0.9999999)
-bones/15/rotation = Quaternion(-0.15212986, 0.8521106, 0.4982477, 0.050132267)
+bones/15/position = Vector3(-0.0028058905, 0.00044262863, 0.0040050885)
+bones/15/rotation = Quaternion(-0.1205392, 0.715595, 0.68337834, 0.079925835)
 bones/15/scale = Vector3(1.0000018, 0.99999994, 1.0000001)
 bones/16/position = Vector3(-2.964998e-10, 0.007349753, -3.4176645e-10)
-bones/16/rotation = Quaternion(-0.6767004, -0.021996865, 0.011992326, 0.73583215)
+bones/16/rotation = Quaternion(-0.6767004, -0.021996863, 0.011992307, 0.73583215)
 bones/16/scale = Vector3(0.9999999, 0.9999999, 1)
 bones/17/position = Vector3(2.5194005e-10, 0.010056692, 4.7977067e-10)
-bones/17/rotation = Quaternion(0.69874376, -0.0120583335, -0.013408476, 0.71514475)
+bones/17/rotation = Quaternion(0.69874376, -0.012058346, -0.013408461, 0.71514475)
 bones/17/scale = Vector3(1, 1, 1.0000001)
-bones/19/position = Vector3(0.002680388, 0.0014505455, 0.0041295337)
-bones/19/rotation = Quaternion(0.15787207, 0.851535, 0.49755684, -0.049008053)
+bones/19/position = Vector3(0.0027218177, 0.00034654362, 0.0038494617)
+bones/19/rotation = Quaternion(0.15796527, 0.7104068, 0.68011564, -0.08838509)
 bones/19/scale = Vector3(1.0000004, 1.0000001, 0.99999994)
 bones/20/position = Vector3(3.1971745e-10, 0.0073435223, -3.515492e-10)
-bones/20/rotation = Quaternion(-0.67668015, 0.015568756, -0.0035194452, 0.7361041)
+bones/20/rotation = Quaternion(-0.67668027, 0.015568756, -0.0035194363, 0.736104)
 bones/20/scale = Vector3(1, 0.99999994, 0.9999998)
 bones/21/position = Vector3(-5.7622984e-10, 0.010056689, 1.7549276e-10)
-bones/21/rotation = Quaternion(0.6991335, 0.013377569, 0.014883993, 0.7147111)
+bones/21/rotation = Quaternion(0.6991335, 0.01337757, 0.014884035, 0.714711)
 bones/21/scale = Vector3(1, 1, 0.99999994)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1331937449]
+libraries/OtherAnims = SubResource("AnimationLibrary_phbtf")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=295637956]
 tree_root = SubResource("AnimationNodeStateMachine_snwor")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="Timer" type="Timer" parent="." index="3" unique_id=1290970151]
+wait_time = 4.0
+
+[node name="CigLight" type="OmniLight3D" parent="." index="4" unique_id=15558347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5324059, 0.6277384)
+light_color = Color(0.5529412, 0.4392157, 1, 1)
+light_energy = 0.0
+omni_range = 0.611
+omni_attenuation = -0.429
+
+[node name="OtherAnimationPlayer" type="AnimationPlayer" parent="." index="5" unique_id=136022150]
+libraries/ = SubResource("AnimationLibrary_1b3ny")

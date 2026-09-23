@@ -41,7 +41,7 @@ func updateMusicVolume():
 	print("Music vol mix = " + str(musicVolumeMix))
 	backgroundMusicPlayer.volume_linear = musicVolumeMix
 
-#NEED TO make sure ALL SFX are included in this - firewoosh 
+#NEED TO make sure ALL SFX are included in this (firewoosh, fire crackle) + SOUND NEED TO BE LOUDER 
 func updateSFXVolume():
 	SFXVolumeMix = Global.SFXVolume * Global.masterVolume
 	print("SFX vol mix = " + str(SFXVolumeMix))
