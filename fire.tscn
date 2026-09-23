@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bev3g3xjdd23r" path="res://Scripts/Fire.gd" id="1_2pqqt"]
 [ext_resource type="PackedScene" uid="uid://7aidwnare2qo" path="res://Models/fire.tscn" id="2_5ltu8"]
-[ext_resource type="AudioStream" uid="uid://cjnawmsktryk5" path="res://firewoosh.mp3" id="3_x6ecg"]
+[ext_resource type="AudioStream" uid="uid://cjnawmsktryk5" path="res://Sounds/firewoosh.mp3" id="3_x6ecg"]
+[ext_resource type="AudioStream" uid="uid://b5dqxs4wcyjts" path="res://Sounds/FireJamCrackle_VitalSounds.wav" id="4_icfi2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ufe0f"]
 radius = 0.25
@@ -56,6 +57,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1699138, 0)
 light_color = Color(0.5517572, 0.4379951, 1, 1)
 light_energy = 6.0
 omni_range = 10.0
+omni_shadow_mode = 0
+
+[node name="FireFlickerTimer" type="Timer" parent="StaticBody3D/OmniLight3D" unique_id=324922533]
+wait_time = 0.1
+autostart = true
 
 [node name="FireTimer" type="Timer" parent="." unique_id=974977932]
 wait_time = 60.0
@@ -68,7 +74,7 @@ volume_db = -15.0
 [node name="LogSparks" type="GPUParticles3D" parent="." unique_id=1886754038]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20475459, 0)
 emitting = false
-amount = 16
+amount = 20
 lifetime = 0.9
 one_shot = true
 explosiveness = 0.9
@@ -80,4 +86,10 @@ draw_pass_1 = SubResource("SphereMesh_8bgeh")
 wait_time = 2.5
 one_shot = true
 
+[node name="FireCrackle" type="AudioStreamPlayer3D" parent="." unique_id=1462647602]
+stream = ExtResource("4_icfi2")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="timeout" from="StaticBody3D/OmniLight3D/FireFlickerTimer" to="." method="_on_fire_flicker_timer_timeout"]
 [connection signal="timeout" from="FireTimer" to="." method="_on_timer_timeout"]
