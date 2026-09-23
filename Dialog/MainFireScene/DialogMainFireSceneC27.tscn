@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bb57cerika47k" path="res://Dialog/MainFireScene/DialogMainFireSceneC00.tscn" id="1_5pdgc"]
 [ext_resource type="Texture2D" uid="uid://bjjpuxlq13ld2" path="res://Textures/GirlT.png" id="2_i6ekw"]
 [ext_resource type="Texture2D" uid="uid://bhgxydmk3mng0" path="res://Textures/PortraitBorder.png" id="3_pdr67"]
-[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://FireJamDialogT.wav" id="4_i26wk"]
+[ext_resource type="AudioStream" uid="uid://3t8xhca1xst8" path="res://Sounds/FireJamDialogT.wav" id="4_i26wk"]
 
 [node name="Control" unique_id=1665476786 instance=ExtResource("1_5pdgc")]
 

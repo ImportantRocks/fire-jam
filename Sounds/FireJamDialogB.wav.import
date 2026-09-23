@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpy1vwxp7uih3"
-path="res://.godot/imported/FireJamDialogB.wav-6f02f3a5a52277ab761f1c2e09c8f90a.sample"
+path="res://.godot/imported/FireJamDialogB.wav-060e67498882033a7498d64980b98871.sample"
 
 [deps]
 
-source_file="res://FireJamDialogB.wav"
-dest_files=["res://.godot/imported/FireJamDialogB.wav-6f02f3a5a52277ab761f1c2e09c8f90a.sample"]
+source_file="res://Sounds/FireJamDialogB.wav"
+dest_files=["res://.godot/imported/FireJamDialogB.wav-060e67498882033a7498d64980b98871.sample"]
 
 [params]
 

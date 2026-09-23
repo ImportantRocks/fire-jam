@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c5od2nemc1uwg"
-path="res://.godot/imported/Cutehandwriting-Regular.otf-7a38d7452c32daa8417fb0797c282ce5.fontdata"
+uid="uid://ct54mt3g8pj2u"
+path="res://.godot/imported/Irisdot-H21.ttf-93ec03df8a1e7665dc353268c147052c.fontdata"
 
 [deps]
 
-source_file="res://Cutehandwriting-Regular.otf"
-dest_files=["res://.godot/imported/Cutehandwriting-Regular.otf-7a38d7452c32daa8417fb0797c282ce5.fontdata"]
+source_file="res://Fonts/Irisdot-H21.ttf"
+dest_files=["res://.godot/imported/Irisdot-H21.ttf-93ec03df8a1e7665dc353268c147052c.fontdata"]
 
 [params]
 

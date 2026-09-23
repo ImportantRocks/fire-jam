@@ -4,11 +4,17 @@ extends AnimatableBody3D
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var ray = $Head/InteractRay
+
+var pauseMenu
+
 
 
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pauseMenu = get_tree().root.get_node("/root/Main/PauseMenu")
+	pauseMenu.hide()
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -19,12 +25,19 @@ func _unhandled_input(event):
 
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ESCAPE:
-			print("esc")
 			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-				print("captured to vis")
+				print("ESC Menu ON")
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+				#THIS MIGHT BE STUPID - set the raycast to 0 length so that you can't interact with anything
+				ray.target_position = Vector3(0,0,0)
+				get_tree().paused = true
+				pauseMenu.show()
 			else: 
-				print("vis to cap")
+				print("ESC Menu OFF")
+				pauseMenu.hide()
+				get_tree().paused = false
+				#set the raycast back to (0,0,-4) so that you can interact with the world again
+				ray.target_position = Vector3(0,0,-4)
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://12x8cjq7cr0x"
-path="res://.godot/imported/GirlB.fbx-810045f4a1982109a03235127f5426ff.scn"
+uid="uid://bv27vogahi2nu"
+path="res://.godot/imported/GirlBSit.fbx-56ae1670d0db722bd1958b922d2dfa7f.scn"
 
 [deps]
 
-source_file="res://Models/GirlB.fbx"
-dest_files=["res://.godot/imported/GirlB.fbx-810045f4a1982109a03235127f5426ff.scn"]
+source_file="res://Characters/GirlBSit.fbx"
+dest_files=["res://.godot/imported/GirlBSit.fbx-56ae1670d0db722bd1958b922d2dfa7f.scn"]
 
 [params]
 
