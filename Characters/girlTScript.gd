@@ -8,12 +8,24 @@ extends Node3D
 var idleAnimations = [
 	"Armature|leaningIn",
 	"Armature|LeaningInTurn",
-	"Armature|armsUp"
+	"Armature|armsUp",
+	"Armature|sitting"
 ]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	girlTSmoking()
+	#girlTSmoking()
+	girlTIdleAnimSwap()
+
+
+#func GirlTIdleAnim():
+	#animTree.travel("Armature|sitting")
+	#animTimer.wait_time = randf_range(2,5)
+	
+	#animTimer.start()
+	
+	#await animTimer.timeout
+	#girlTIdleAnimSwap()
 
 
 func girlTIdleAnimSwap():
